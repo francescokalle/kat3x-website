@@ -1,9 +1,10 @@
 import React from 'react';
-import { Activity, BookOpen, Database, FileText, Search, ShieldCheck } from 'lucide-react';
+import { Activity, BookOpen, Cpu, Database, FileText, Microscope, Quote, Rabbit, ScanEye, Search, Share2, ShieldCheck, Sprout } from 'lucide-react';
 import GlowTitle from './components/GlowTitle';
 
 // Importiamo i dati direttamente dal file JSON locale
 import reportsData from '@res/data/reports-data.json';
+import { Share } from 'next/font/google';
 
 const Kat3xHome = () => {
   return (
@@ -12,7 +13,7 @@ const Kat3xHome = () => {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Activity className="h-6 w-6 text-brand-600" />
+            <Rabbit className="h-6 w-6 text-brand-600" />
             <span className="font-bold text-xl tracking-tight">Kat3x</span>
             <span className="hidden sm:inline-block text-sm text-slate-500 ml-2 border-l pl-2 border-slate-300">
               AI Visibility Observatory
@@ -37,12 +38,11 @@ const Kat3xHome = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
           <GlowTitle 
             as="h1" 
-            className="text-6xl text-slate-900 uppercase"
+            className="text-6xl text-slate-900"
             glowSize="px-40 py-28" // Lo rendiamo enorme per la Hero
-            glowColor="50, 255, 100"
+            glowColor="100, 255, 100"
           >
-            L'Osservatorio indipendente<br />
-            <span className="text-brand-600">AI Citability</span>
+            L'Osservatorio indipendente <br className="hidden sm:block" /> sulla <span className="text-brand-600">AI Citability</span>
           </GlowTitle>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-12">
             Kat3x analizza e definisce come i Large Language Models mappano il tessuto produttivo. 
@@ -89,21 +89,21 @@ const Kat3xHome = () => {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <article className="p-6">
               <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Activity className="h-6 w-6" />
+                <Share2 className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-2">1. Knowledge Seeding</h3>
               <p className="text-slate-600">Dispieghiamo nodi semantici ottimizzati per favorire l'ingestione diretta da parte dei sistemi RAG e dei crawler LLM.</p>
             </article>
             <article className="p-6">
               <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Database className="h-6 w-6" />
+                <ScanEye className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-2">2. Il Protocollo Diagnostico</h3>
               <p className="text-slate-600">Non offriamo opinioni, ma test scientifici e replicabili per valutare il grado di Semantic Recognition del tuo brand.</p>
             </article>
             <article className="p-6">
               <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="h-6 w-6" />
+                <Quote className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-2">3. L'AI Citability</h3>
               <p className="text-slate-600">L'obiettivo finale: garantire che l'azienda sia presente, citata e compresa nei processi decisionali guidati dall'Intelligenza Artificiale.</p>
@@ -177,7 +177,7 @@ const Kat3xHome = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Activity className="h-5 w-5 text-brand-500" />
+              <Rabbit className="h-5 w-5 text-brand-500" />
               <span className="font-bold text-lg text-white">Kat3x</span>
             </div>
             <p className="text-sm leading-relaxed max-w-sm">

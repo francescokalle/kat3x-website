@@ -2,17 +2,17 @@
 
 @theme {
   /* PALETTE BRAND KAT3X (Cyber Emerald - RGB) */
-  --color-brand-50: rgb(236 252 247);
-  --color-brand-100: rgb(204 248 235);
-  --color-brand-200: rgb(161 241 214);
-  --color-brand-300: rgb(94 230 188);
-  --color-brand-400: rgb(45 210 156);
-  --color-brand-500: rgb(16 185 125);
-  --color-brand-600: rgb(5 150 99);
-  --color-brand-700: rgb(4 120 80);
-  --color-brand-800: rgb(6 95 66);
-  --color-brand-900: rgb(4 78 54);
-  --color-brand-950: rgb(1 44 31);
+--color-brand-50: rgb(238 252 244);
+--color-brand-100: rgb(210 247 228);
+--color-brand-200: rgb(170 238 204);
+--color-brand-300: rgb(110 222 170);
+--color-brand-400: rgb(60 205 140);
+--color-brand-500: rgb(34 175 95);
+--color-brand-600: rgb(22 140 75);
+--color-brand-700: rgb(18 112 60);
+--color-brand-800: rgb(16 90 50);
+--color-brand-900: rgb(12 72 40);
+--color-brand-950: rgb(6 40 24);
 
   /* RADIAL GRADIENTS (Glow Effects)
      Utilizzano i verdi brand con opacità variabile per non coprire il testo 
