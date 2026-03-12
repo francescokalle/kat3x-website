@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  /* PALETTE BRAND KAT3X (Cyber Emerald - RGB) */
+  --color-brand-50: rgb(236 252 247);
+  --color-brand-100: rgb(204 248 235);
+  --color-brand-200: rgb(161 241 214);
+  --color-brand-300: rgb(94 230 188);
+  --color-brand-400: rgb(45 210 156);
+  --color-brand-500: rgb(16 185 125);
+  --color-brand-600: rgb(5 150 99);
+  --color-brand-700: rgb(4 120 80);
+  --color-brand-800: rgb(6 95 66);
+  --color-brand-900: rgb(4 78 54);
+  --color-brand-950: rgb(1 44 31);
+
+  /* RADIAL GRADIENTS (Glow Effects)
+     Utilizzano i verdi brand con opacità variabile per non coprire il testo 
+  */
+
+  --bg-smart-glow: radial-gradient(
+      ellipse at center, 
+      rgba(87, 199, 133, 0.8) 0%, 
+      rgba(87, 199, 133, 0) 70%
+    );
+}
+

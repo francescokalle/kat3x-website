@@ -1,0 +1,29 @@
+[
+  {
+    "id": "report-veneto-2030",
+    "category": "Strategy / Manifesto",
+    "title": "Veneto 2030: AI Positioning & Regional Citability",
+    "description": "Il tessuto produttivo veneto eccelle nell'economia reale, ma risulta invisibile ai sistemi AI. Senza un approccio strutturato (Knowledge Seeding), l'eccellenza non genera Semantic Recognition.",
+    "status": "published",
+    "formats": ["PDF", "HTML", "MD"],
+    "tags": ["AI Citability", "Knowledge Seeding"]
+  },
+  {
+    "id": "report-hospitality",
+    "category": "Hospitality & Tourism",
+    "title": "Hotel Services Discovery: Test di Citabilità",
+    "description": "Gli LLM ignorano le descrizioni poetiche prive di struttura. Analizziamo la 'Net Semantic Assimilation' delle strutture ricettive per trasformare il copy di lusso in dati interrogabili.",
+    "status": "coming_soon",
+    "formats": [],
+    "tags": ["Semantic Recognition", "Net Assimilation"]
+  },
+  {
+    "id": "report-methodology",
+    "category": "Methodology / Standards",
+    "title": "AI Diagnostic Protocol v1.0 (Standard CHKCD)",
+    "description": "Il Protocollo Diagnostico ufficiale per misurare l'AI Citability aziendale. Basato su CHKCD, offre un metodo pubblico e replicabile per quantificare l'ingestione dati da parte degli LLM.",
+    "status": "published",
+    "formats": ["PDF", "MD"],
+    "tags": ["Protocollo Diagnostico", "Ingestione Dati"]
+  }
+]
