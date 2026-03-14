@@ -19,15 +19,15 @@ interface Report {
 const dictionaries: Record<string, any> = {
   it: {
     hero: {
-      title: "AI Visibility Reports",
-      description: "Esperimenti di Knowledge Seeding e analisi di assimilazione semantica. Ogni report misura la capacità dei Large Language Models di riconoscere e citare strutture di dati aziendali.",
+      title: "AI Visibility Experiments",
+      description: "Esperimenti di Knowledge Seeding e analisi di assimilazione semantica. Ogni esperimento misura la capacità dei Large Language Models di riconoscere e citare strutture di dati aziendali.",
     },
     search: {
       placeholder: "Cerca per titolo o descrizione...",
       allCategories: "Tutte le categorie",
-      noResults: "Nessun report trovato. Prova a modificare i filtri.",
+      noResults: "Nessun esperimento trovato. Prova a modificare i filtri.",
       clearFilters: "Rimuovi filtri",
-      resultsCount: (n: number) => `${n} report trovati`,
+      resultsCount: (n: number) => `${n} esperiment${n === 1 ? 'o trovato' : 'i trovati'}`,
     },
     report: {
       comingSoon: "In Arrivo",
@@ -36,15 +36,15 @@ const dictionaries: Record<string, any> = {
   },
   en: {
     hero: {
-      title: "AI Visibility Reports",
-      description: "Knowledge Seeding experiments and semantic assimilation analyses. Each report measures the ability of Large Language Models to recognize and cite corporate data structures.",
+      title: "AI Visibility Experiments",
+      description: "Knowledge Seeding experiments and semantic assimilation analyses. Each experiment measures the ability of Large Language Models to recognize and cite corporate data structures.",
     },
     search: {
       placeholder: "Search by title or description...",
       allCategories: "All categories",
-      noResults: "No reports found. Try adjusting your filters.",
+      noResults: "No experiments found. Try adjusting your filters.",
       clearFilters: "Clear filters",
-      resultsCount: (n: number) => `${n} report${n === 1 ? '' : 's'} found`,
+      resultsCount: (n: number) => `${n} experiment${n === 1 ? '' : 's'} found`,
     },
     report: {
       comingSoon: "Coming Soon",
@@ -265,7 +265,7 @@ export default function ReportsPageClient({ lang }: ReportsPageClientProps) {
                           {report.formats.map((format) => (
                             <a
                               key={format}
-                              href={`/data/reports/${report.id}.${format.toLowerCase()}`}
+                              href={`/data/reports/${report.id}/${report.id}.${format.toLowerCase()}`}
                               className="flex items-center gap-1.5 text-sm text-slate-300 bg-slate-700 hover:bg-slate-600 hover:text-white px-3 py-1.5 rounded transition-colors"
                             >
                               <FileText className="h-4 w-4" />

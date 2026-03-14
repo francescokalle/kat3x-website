@@ -1,13 +1,10 @@
-// Returning experiments data
-import React from 'react';
+import ReportsPageClient from '../../../components/ReportsClient';
 
-const ExperimentsPage = () => {
-    return (
-        <div>
-            <h1>Experiments</h1>
-            {/* Content of the original reports page goes here */}
-        </div>
-    );
-};
-
-export default ExperimentsPage;
+export default async function ExperimentsPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  return <ReportsPageClient lang={lang} />;
+}
