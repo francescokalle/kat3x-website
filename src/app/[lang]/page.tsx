@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileText, Quote, Rabbit, ScanEye, Search, Share2, ShieldCheck } from 'lucide-react';
 import GlowTitle from '../components/GlowTitle'; // Assicurati che il percorso sia corretto (../../)
+import Navbar from '../components/NavBar';
 
 // Importiamo i dati. 
 // NOTA: Se anche il contenuto del JSON deve essere tradotto, il JSON dovrebbe avere una struttura it/en. 
@@ -10,16 +11,6 @@ import reportsData from '@res/data/reports-data.json';
 // --- DIZIONARI DI TRADUZIONE ---
 const dictionaries: Record<string, any> = {
   it: {
-    meta: {
-      tagline: "AI Visibility Observatory"
-    },
-    nav: {
-      problem: "Il Problema",
-      useCases: "Casi d'Uso",
-      methodology: "Metodologia",
-      standard: "Standard CHKCD",
-      cta: "Avvia Self-Test"
-    },
     hero: {
       titleLine1: "L'Osservatorio indipendente",
       titleLine2: "sulla",
@@ -71,16 +62,6 @@ const dictionaries: Record<string, any> = {
     }
   },
   en: {
-    meta: {
-      tagline: "AI Visibility Observatory"
-    },
-    nav: {
-      problem: "The Problem",
-      useCases: "Use Cases",
-      methodology: "Methodology",
-      standard: "CHKCD Standard",
-      cta: "Run Self-Test"
-    },
     hero: {
       titleLine1: "The Independent Observatory",
       titleLine2: "on",
@@ -144,30 +125,7 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200">
       
-      {/* HEADER / NAVIGATION */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Rabbit className="h-6 w-6 text-brand-600" />
-            <span className="font-bold text-xl tracking-tight">Kat3x</span>
-            <span className="hidden sm:inline-block text-sm text-slate-500 ml-2 border-l pl-2 border-slate-300">
-              {dict.meta.tagline}
-            </span>
-          </div>
-          <nav className="hidden md:flex gap-6 text-sm font-medium text-slate-600">
-            {/* I link ora includono la lingua dinamica */}
-            <a href={`/${lang}/problem`} className="hover:text-brand-600 transition-colors">{dict.nav.problem}</a>
-            <a href={`/${lang}/use-cases`} className="hover:text-brand-600 transition-colors">{dict.nav.useCases}</a>
-            <a href={`/${lang}/knowledge/methodology`} className="hover:text-brand-600 transition-colors">{dict.nav.methodology}</a>
-            <a href="https://chkcd.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-600 transition-colors">{dict.nav.standard}</a>
-          </nav>
-          <div>
-            <a href={`/${lang}/diagnostic`} className="bg-brand-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-brand-700 transition-colors">
-              {dict.nav.cta}
-            </a>
-          </div>
-        </div>
-      </header>
+      <Navbar lang={lang}/>
 
       <main>
         {/* HERO SECTION */}
