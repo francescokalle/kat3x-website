@@ -6,7 +6,7 @@ import Navbar from '../components/NavBar';
 // Importiamo i dati. 
 // NOTA: Se anche il contenuto del JSON deve essere tradotto, il JSON dovrebbe avere una struttura it/en. 
 // Per ora assumiamo che i dati siano neutri o gestiti separatamente.
-import reportsData from '@res/data/reports-data.json';
+import reportsData from '@res/data/reports/reports-data.json';
 
 // --- DIZIONARI DI TRADUZIONE ---
 const dictionaries: Record<string, any> = {
