@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google"; // O i tuoi font
 import "./globals.css";
-
-// ... import font ...
 
 export const metadata: Metadata = {
   title: "Kat3x | AI Visibility Observatory",
@@ -26,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body className="antialiased text-slate-900 bg-slate-50">
+      <body className="antialiased text-dark bg-white">
         {children}
         
         {/* Schema.org JSON-LD per Knowledge Seeding */}
