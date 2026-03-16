@@ -31,13 +31,19 @@ export default function Navbar({ lang }: NavbarProps) {
   const dict = navData[lang] || navData.en;
   const homePath = `/${lang}`;
 
+  // Stile tipizzato per il cursore centrato a forma di cantiere (🏗️)
+  // Nota: abbiamo aggiunto text-anchor, dominant-baseline e l'offset "16 16"
+  const disabledCursorStyle: React.CSSProperties = {
+    cursor: "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" style=\"font-size: 24px;\"><text x=\"50%\" y=\"50%\" text-anchor=\"middle\" dominant-baseline=\"central\">🚧</text></svg>') 16 16, not-allowed"
+  };
+
   return (
     <header className="bg-white/70 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* LOGO E BRAND - Entrambi puntano alla Home */}
         <a 
-          href = {`/${lang}`}
+          href={`/${lang}`}
           className="flex items-center gap-2 group transition-all"
         >
           <CatLogo 
@@ -60,20 +66,41 @@ export default function Navbar({ lang }: NavbarProps) {
           <a href={`/${lang}/problem`} className="hover:text-brand-600 transition-colors">
             {dict.problem}
           </a>
-          <a href={`/${lang}/use-cases`} className="hover:text-brand-600 transition-colors">
-            {dict.useCases}
-          </a>
-          <a href={`/${lang}/knowledge/methodology`} className="hover:text-brand-600 transition-colors">
-            {dict.methodology}
-          </a>
-          <a 
-            href="https://chkcd.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-brand-600 transition-colors"
+          
+          {/* Link 1: Use Cases (Lavori in corso) */}
+          <span 
+            className="group flex items-center gap-2 opacity-60 transition-colors" 
+            style={disabledCursorStyle}
           >
-            {dict.standard}
-          </a>
+            <a href="#" className="pointer-events-none">
+              {dict.useCases}
+            </a>
+          </span>
+
+          {/* Link 2: Methodology (Lavori in corso) */}
+          <span 
+            className="group flex items-center gap-2 opacity-60 transition-colors" 
+            style={disabledCursorStyle}
+          >
+            <a href="#" className="pointer-events-none">
+              {dict.methodology}
+            </a>
+          </span>
+
+          {/* Link 3: Standard (Lavori in corso) */}
+          <span 
+            className="group flex items-center gap-2 opacity-60 transition-colors" 
+            style={disabledCursorStyle}
+          >
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="pointer-events-none"
+            >
+              {dict.standard}
+            </a>
+          </span>
         </nav>
 
         {/* CTA BUTTON */}

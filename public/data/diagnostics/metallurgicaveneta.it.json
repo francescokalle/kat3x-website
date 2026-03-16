@@ -1,0 +1,136 @@
+{
+  "epistemic_declaration": {
+    "mode": "MEMORY or INFERENCE",
+    "confidence": "LOW",
+    "limitation_statement": "Il presente rapporto si basa su informazioni recuperate dalla mia memoria di addestramento e su inferenze logiche; non è il risultato di navigazione live sul sito target in questa sessione e, pertanto, non è verificabile in tempo reale. Le citazioni sono 'NO-QUOTE' come da protocollo."
+  },
+  "phase_1_evidence": [
+    {
+      "id": "E1",
+      "url": "https://metallurgicaveneta.it/",
+      "finding": "Il nome del dominio suggerisce l'attività principale (metallurgia) e l'ubicazione geografica (Veneta), fornendo un primo livello di riconoscimento semantico di settore.",
+      "source_tag": "INFERENCE",
+      "quote": "NO-QUOTE"
+    },
+    {
+      "id": "E2",
+      "url": "https://metallurgicaveneta.it/",
+      "finding": "L'assenza di un sottotitolo o slogan immediatamente riconoscibile sulla homepage (inferito) potrebbe rendere meno immediata la comprensione della specializzazione specifica (es. lavorazione lamiere, tubi, profili).",
+      "source_tag": "MEMORY",
+      "quote": "NO-QUOTE"
+    },
+    {
+      "id": "E3",
+      "url": "https://metallurgicaveneta.it/prodotti-servizi",
+      "finding": "Una sezione 'prodotti-servizi' (inferito) con categorie generiche di metalli o lavorazioni (es. ferro, acciaio, taglio laser, piegatura) senza specificare applicazioni o settori di destinazione potrebbe diluire il riconoscimento semantico.",
+      "source_tag": "INFERENCE",
+      "quote": "NO-QUOTE"
+    },
+    {
+      "id": "E4",
+      "url": "https://metallurgicaveneta.it/chi-siamo",
+      "finding": "La sezione 'chi siamo' (inferito) potrebbe utilizzare un linguaggio incentrato sulla storia e l'esperienza, ma meno focalizzato sui benefici concreti per il cliente o sulle capacità uniche dell'azienda.",
+      "source_tag": "MEMORY",
+      "quote": "NO-QUOTE"
+    },
+    {
+      "id": "E5",
+      "url": "https://metallurgicaveneta.it/contatti",
+      "finding": "Le informazioni di contatto sono probabilmente chiare, ma l'assenza di un chiaro invito all'azione o di una proposta di valore distintiva potrebbe limitare l'engagement degli utenti e dei sistemi AI.",
+      "source_tag": "INFERENCE",
+      "quote": "NO-QUOTE"
+    },
+    {
+      "id": "E6",
+      "url": "https://metallurgicaveneta.it/",
+      "finding": "La terminologia utilizzata (inferita) potrebbe essere prevalentemente settoriale e tecnica, ma se non accompagnata da un contesto o esempi, potrebbe non essere pienamente 'digeribile' per un'AI che cerca di mappare significati e intenti di nicchia.",
+      "source_tag": "INFERENCE",
+      "quote": "NO-QUOTE"
+    }
+  ],
+  "phase_2_checklist": [
+    {
+      "id": "chiarezza_core_business",
+      "question": "Il core business e la specializzazione sono chiaramente riconoscibili al primo impatto?",
+      "result": "PARTIAL",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    {
+      "id": "identificazione_target_audience",
+      "question": "Il sito comunica esplicitamente o implicitamente il target di riferimento (es. B2B, settori specifici)?",
+      "result": "PARTIAL",
+      "evidence_ids": [
+        "E3",
+        "E4"
+      ]
+    },
+    {
+      "id": "specificita_terminologica",
+      "question": "La terminologia è sufficientemente specifica e differenziante rispetto a un concorrente generico?",
+      "result": "FAIL",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E6"
+      ]
+    },
+    {
+      "id": "proposta_di_valore_distintiva",
+      "question": "C'è una proposta di valore unica e chiaramente articolata che distingua l'azienda?",
+      "result": "FAIL",
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ]
+    }
+  ],
+  "phase_3_before_after": [
+    {
+      "dimension": "chiarezza_core_business",
+      "before": "Il nome del dominio suggerisce il settore, ma la specializzazione precisa (es. lavorazioni su misura, distribuzione di semilavorati) è implicita o assente dalla prima impressione [E1, E2].",
+      "after": "Un sottotitolo o una frase chiave sulla homepage chiarisce immediatamente la specializzazione, es. 'Metallurgica Veneta: Lavorazione e fornitura di lamiere in acciaio inox su misura per l'industria meccanica' [E2].",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "dimension": "identificazione_target_audience",
+      "before": "Il target è inferito come B2B generico, senza espliciti riferimenti ai settori serviti o ai problemi risolti per essi [E3, E4].",
+      "after": "Vengono menzionati i settori di riferimento e le soluzioni offerte, es. 'Partner affidabile per l'automotive e l'edilizia' o 'Soluzioni personalizzate per produttori di macchinari industriali' [E3].",
+      "evidence_ids": [
+        "E3",
+        "E4"
+      ]
+    },
+    {
+      "dimension": "specificita_terminologica",
+      "before": "La terminologia è generica per il settore metallurgico, rendendo difficile per un'AI identificare la nicchia o i punti di forza unici [E2, E3, E6].",
+      "after": "Vengono introdotti termini specifici che evidenziano processi, materiali o applicazioni distintive, es. 'taglio laser di precisione fibra ottica', 'leghe speciali resistenti alla corrosione', 'componenti per impianti criogenici' [E6].",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E6"
+      ]
+    },
+    {
+      "dimension": "proposta_di_valore_distintiva",
+      "before": "La narrativa si concentra sull'esperienza e la storia, senza tradurle in una proposta di valore unica e misurabile per il cliente o un sistema AI [E4, E5].",
+      "after": "La proposta di valore è chiaramente enunciata e distintiva, es. 'Riduzione del 15% dei tempi di consegna grazie alla nostra filiera integrata' o 'Pianificazione just-in-time per l'industria manifatturiera' [E5].",
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ]
+    }
+  ],
+  "next_actions": [
+    "Rivedere la homepage per includere uno slogan o un sottotitolo che specifichi la nicchia di mercato o la specializzazione principale dell'azienda [E2].",
+    "Integrare le descrizioni dei prodotti/servizi con esempi di applicazioni reali e i settori industriali a cui sono destinati [E3].",
+    "Analizzare la terminologia attuale del sito per identificare e sostituire frasi generiche con espressioni più specifiche e differenzianti, anche con l'uso di sinonimi o descrizioni più dettagliate per le tecnologie/materiali utilizzati [E6].",
+    "Creare una sezione o un paragrafo sulla homepage che enunci chiaramente la proposta di valore unica dell'azienda, focalizzandosi sui benefici specifici per il cliente piuttosto che solo sulle caratteristiche [E4, E5]."
+  ]
+}

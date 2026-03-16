@@ -1,0 +1,136 @@
+{
+  "epistemic_declaration": {
+    "mode": "LIVE",
+    "confidence": "HIGH",
+    "limitation_statement": "Il report si basa su dati raccolti in tempo reale tramite navigazione diretta del dominio. La completezza dell'analisi è limitata alle pagine visitate e al contesto semantico rilevato durante la sessione."
+  },
+  "phase_1_evidence": [
+    {
+      "id": "E1",
+      "url": "https://www.karnaval.it/",
+      "finding": "Il sito si presenta come un'agenzia eventi che trasforma idee in esperienze, indicando il core business.",
+      "source_tag": "LIVE",
+      "quote": "Karnaval: l'agenzia eventi che trasforma ogni idea in un'esperienza indimenticabile. Realizziamo eventi, spettacoli e produzioni."
+    },
+    {
+      "id": "E2",
+      "url": "https://www.karnaval.it/",
+      "finding": "Sono elencate categorie di servizi principali, fornendo una chiara identificazione delle offerte.",
+      "source_tag": "LIVE",
+      "quote": "Organizzazione eventi, Artisti e spettacoli, Service audio e luci, Location per eventi, Creazione e produzione contenuti."
+    },
+    {
+      "id": "E3",
+      "url": "https://www.karnaval.it/chi-siamo",
+      "finding": "L'azienda enfatizza l'esperienza e l'approccio personalizzato nella creazione degli eventi.",
+      "source_tag": "LIVE",
+      "quote": "Mettiamo a disposizione la nostra pluriennale esperienza per creare eventi unici e personalizzati, curando ogni singolo dettaglio."
+    },
+    {
+      "id": "E4",
+      "url": "https://www.karnaval.it/eventi-corporate",
+      "finding": "Viene specificato l'impegno nell'organizzazione di eventi corporate che rafforzano il brand.",
+      "source_tag": "LIVE",
+      "quote": "Dalle convention aziendali ai lanci di prodotto, creiamo esperienze memorabili che rafforzano il brand e coinvolgono i partecipanti."
+    },
+    {
+      "id": "E5",
+      "url": "https://www.karnaval.it/artisti-e-spettacoli",
+      "finding": "Viene presentata l'offerta di artisti e spettacoli, utilizzando il termine generico 'alta qualità'.",
+      "source_tag": "LIVE",
+      "quote": "Un vasto catalogo di artisti e spettacoli per ogni tipo di evento, garantendo intrattenimento di alta qualità e successo."
+    },
+    {
+      "id": "E6",
+      "url": "https://www.karnaval.it/contatti",
+      "finding": "Il sito presenta una chiara call to action per invitare i potenziali clienti a richiedere una consulenza.",
+      "source_tag": "LIVE",
+      "quote": "Contattaci oggi stesso per una consulenza gratuita e scopri come possiamo trasformare la tua visione in realtà."
+    },
+    {
+      "id": "E7",
+      "url": "https://www.karnaval.it/",
+      "finding": "Vengono elencate diverse tipologie di eventi gestiti, fornendo ulteriori dettagli sul target e servizi.",
+      "source_tag": "LIVE",
+      "quote": "Eventi Aziendali, Eventi Privati, Matrimoni, Concerti e Festival, Eventi sportivi. Ogni occasione merita di essere indimenticabile."
+    }
+  ],
+  "phase_2_checklist": [
+    {
+      "id": "terminology_clarity",
+      "question": "La terminologia utilizzata è specifica e chiara per descrivere servizi e prodotti?",
+      "result": "PASS",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E4",
+        "E7"
+      ]
+    },
+    {
+      "id": "core_offering_identification",
+      "question": "È facile per un sistema AI identificare il core business dell'azienda?",
+      "result": "PASS",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "id": "target_audience_clarity",
+      "question": "Il target di clientela (es. aziende, privati, enti) è esplicitamente definito o facilmente inferibile?",
+      "result": "PASS",
+      "evidence_ids": [
+        "E4",
+        "E7"
+      ]
+    },
+    {
+      "id": "value_proposition_specificity",
+      "question": "La proposta di valore è articolata con dettagli specifici o si basa principalmente su affermazioni generiche?",
+      "result": "PARTIAL",
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E4",
+        "E5"
+      ]
+    },
+    {
+      "id": "navigational_coherence",
+      "question": "La struttura del sito e la navigazione supportano una comprensione semantica coerente delle offerte?",
+      "result": "PASS",
+      "evidence_ids": [
+        "E2",
+        "E7"
+      ]
+    },
+    {
+      "id": "generic_language_prevalence",
+      "question": "Sono presenti termini generici o 'buzzword' di marketing non supportati da dettagli specifici?",
+      "result": "PARTIAL",
+      "evidence_ids": [
+        "E1",
+        "E4",
+        "E5"
+      ]
+    }
+  ],
+  "phase_3_before_after": [
+    {
+      "dimension": "value_proposition_specificity",
+      "before": "La proposta di valore è chiara ma talvolta si affida a termini ampi come 'indimenticabile' o 'alta qualità' senza immediati dettagli di supporto [E1], [E5].",
+      "after": "Integrare elementi specifici (es. metriche, case study, feedback concreti) per supportare e contestualizzare le affermazioni di valore, rendendole più robuste per l'interpretazione AI [E3], [E4], [E5]."
+    },
+    {
+      "dimension": "generic_language_prevalence",
+      "before": "Sono presenti alcuni termini di marketing generici, come 'indimenticabile' o 'alta qualità', che pur essendo positivi, mancano di specificità semantica per un'analisi approfondita [E1], [E4], [E5].",
+      "after": "Revisionare il linguaggio per sostituire o arricchire i termini generici con descrizioni più concrete, esempi o riferimenti a risultati specifici, migliorando la riconoscibilità semantica [E1], [E4], [E5]."
+    }
+  ],
+  "next_actions": [
+    "Rivedere le descrizioni dei servizi e della proposta di valore per aggiungere dettagli più concreti e specifici, riducendo l'affidamento su aggettivi generici [E5].",
+    "Integrare esempi reali, brevi case study o testimonianze che supportino affermazioni come 'alta qualità' e 'esperienze memorabili', fornendo contesti verificabili [E3], [E4], [E5].",
+    "Valutare l'introduzione di dati quantificabili o metriche di successo ove possibile, per rafforzare la proposta di valore con evidenze più tangibili per l'AI [E4]."
+  ]
+}

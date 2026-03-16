@@ -1,0 +1,60 @@
+# ==============================================================================
+# Kat3x AI Visibility Observatory - Robots Configuration
+# Dual-Targeting Architecture: Human Experience + LLM Optimization
+#
+# "Un'intelligenza artificiale non può citare ciò che non comprende. 
+#  E non può comprendere ciò che non è strutturato."
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Global Crawler Rules
+# ------------------------------------------------------------------------------
+User-agent: *
+Allow: /
+# Block paths lacking semantic value to reduce crawler noise
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_vercel/
+Disallow: /fonts/
+
+# ------------------------------------------------------------------------------
+# 2. Explicit LLM & AI Crawler Invitations (Knowledge Seeding)
+# ------------------------------------------------------------------------------
+# OpenAI
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+User-agent: Gemini
+Allow: /
+
+# Perplexity & Search
+User-agent: PerplexityBot
+Allow: /
+User-agent: Omgili
+Allow: /
+User-agent: Omgilibot
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 3. Dedicated Knowledge Sitemaps
+# ------------------------------------------------------------------------------
+# The primary sitemap for standard search engines
+Sitemap: https://kat3x.com/sitemap.xml
+
+# The isolated semantic sitemap strictly for the /knowledge/ architecture
+Sitemap: https://kat3x.com/sitemap-knowledge.xml
