@@ -2,6 +2,7 @@ import React from 'react';
 import { ScanEye, Scale, AlertCircle, BarChart3, Workflow, BookOpenCheck, FileCheck, Library, Rabbit } from 'lucide-react';
 import GlowTitle from '../../components/GlowTitle';
 import Navbar from '@/app/components/NavBar';
+import Footer from '@/app/components/Footer';
 
 const dictionaries: Record<string, any> = {
   it: {
@@ -124,6 +125,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           </div>
         </section>
       </main>
+      <Footer lang={lang} />
     </div>
   );
 }

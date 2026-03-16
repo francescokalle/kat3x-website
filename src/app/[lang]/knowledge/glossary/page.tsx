@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen } from 'lucide-react';
 import GlowTitle from '../../../components/GlowTitle';
 import Navbar from '../../../components/NavBar';
+import Footer from '@/app/components/Footer';
 
 // --- TRANSLATION DICTIONARIES ---
 const dictionaries: Record<string, any> = {
@@ -150,6 +151,7 @@ export default async function GlossaryPage({ params }: { params: Promise<{ lang:
           </dl>
         </section>
       </main>
+      <Footer lang={lang} />
     </div>
   );
 }

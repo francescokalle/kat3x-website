@@ -1,14 +1,11 @@
 import React from 'react';
-import { FileText, Quote, Rabbit, ScanEye, Search, Share2, ShieldCheck } from 'lucide-react';
-import GlowTitle from '../components/GlowTitle'; // Assicurati che il percorso sia corretto (../../)
+import { FileText, Quote, ScanEye, Search, Share2, ShieldCheck } from 'lucide-react';
+import GlowTitle from '../components/GlowTitle';
 import Navbar from '../components/NavBar';
+import Footer from '../components/Footer';
 
-// Importiamo i dati. 
-// NOTA: Se anche il contenuto del JSON deve essere tradotto, il JSON dovrebbe avere una struttura it/en. 
-// Per ora assumiamo che i dati siano neutri o gestiti separatamente.
 import reportsData from '@res/data/reports/reports-data.json';
 
-// --- DIZIONARI DI TRADUZIONE ---
 const dictionaries: Record<string, any> = {
   it: {
     hero: {
@@ -44,21 +41,6 @@ const dictionaries: Record<string, any> = {
       title: "Misura la tua AI Citability",
       desc: "Accedi al Diagnostic Playground. Utilizza il nostro protocollo standard per verificare il livello di ingestione dati del tuo brand sui principali LLM.",
       button: "Avvia Diagnostica Gratuita"
-    },
-    footer: {
-      desc: "Kat3x è una piattaforma osservativa indipendente che studia come la conoscenza strutturata interagisce con i large language models. Monitora il framework normativo CHKCD.",
-      titles: {
-        kb: "Knowledge Base",
-        network: "Network"
-      },
-      links: {
-        glossary: "Glossario Canonico",
-        protocol: "Protocollo Diagnostico",
-        syntax: "Sintassi TONL",
-        about: "Chi Siamo",
-        playground: "Diagnostic Playground"
-      },
-      copyright: "Semantic Node — Machine Readable Ready"
     }
   },
   en: {
@@ -95,30 +77,11 @@ const dictionaries: Record<string, any> = {
       title: "Measure your AI Citability",
       desc: "Access the Diagnostic Playground. Use our standard protocol to verify your brand's data ingestion level on major LLMs.",
       button: "Start Free Diagnostic"
-    },
-    footer: {
-      desc: "Kat3x is an independent observational platform studying how structured knowledge interacts with large language models. It monitors the CHKCD normative framework.",
-      titles: {
-        kb: "Knowledge Base",
-        network: "Network"
-      },
-      links: {
-        glossary: "Canonical Glossary",
-        protocol: "Diagnostic Protocol",
-        syntax: "TONL Syntax",
-        about: "About Us",
-        playground: "Diagnostic Playground"
-      },
-      copyright: "Semantic Node — Machine Readable Ready"
     }
   }
 };
 
-// --- COMPONENTE PAGINA DINAMICA ---
-
 export default async function Kat3xHome({ params }: { params: Promise<{ lang: string }> }) {
-  // 1. Recuperiamo la lingua (fallback su 'it' se qualcosa va storto)
-  // Nota: In Next.js 15 'params' potrebbe dover essere atteso (await), ma in 13/14 è diretto.
   const { lang } = await params; 
   const dict = dictionaries[lang] || dictionaries.it;
 
@@ -142,7 +105,6 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
             {dict.hero.description}
           </p>
           
-          {/* CANONICAL PHRASE - OBLIGATORY */}
           <div className="bg-brand-100 border-l-4 border-brand-600 p-6 max-w-4xl mx-auto text-left rounded-r-lg shadow-sm">
             <blockquote className="text-lg sm:text-xl font-medium text-slate-800 italic">
               "{dict.hero.quote}"
@@ -204,7 +166,7 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
           </div>
         </section>
 
-        {/* EXPERIMENTS DASHBOARD (DYNAMIC JSON MAPPING) */}
+        {/* EXPERIMENTS DASHBOARD */}
         <section className="py-16 bg-slate-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-10">
@@ -229,7 +191,6 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
                     )}
                   </div>
                   <h3 className="text-lg font-bold mb-3">{report.title}</h3>
-                  {/* Se anche le descrizioni dei report vanno tradotte, il JSON deve cambiare struttura. Qui lascio statico. */}
                   <p className="text-sm text-slate-400 mb-6 flex-grow">{report.description}</p>
                   
                   {report.formats.length > 0 && (
@@ -252,7 +213,7 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
           </div>
         </section>
 
-        {/* CTA: DIAGNOSTIC PLAYGROUND */}
+        {/* CTA SECTION */}
         <section className="py-20 bg-brand-600 text-white text-center px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">{dict.ctaSection.title}</h2>
@@ -266,41 +227,7 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
         </section>
       </main>
 
-      {/* FOOTER (LLM SEEDING FRIENDLY) */}
-      <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Rabbit className="h-5 w-5 text-brand-500" />
-              <span className="font-bold text-lg text-white">Kat3x</span>
-            </div>
-            <p className="text-sm leading-relaxed max-w-sm">
-              {dict.footer.desc}
-            </p>
-          </div>
-          <div>
-            <h4 className="text-white font-bold mb-4">{dict.footer.titles.kb}</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href={`/${lang}/knowledge/glossary`} className="hover:text-white transition-colors">{dict.footer.links.glossary}</a></li>
-              <li><a href={`/${lang}/knowledge/methodology`} className="hover:text-white transition-colors">{dict.footer.links.protocol}</a></li>
-              <li><a href={`/${lang}/knowledge/tonl`} className="hover:text-white transition-colors">{dict.footer.links.syntax}</a></li>
-              <li><a href="/llms.txt" className="hover:text-white transition-colors">llms.txt</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-bold mb-4">{dict.footer.titles.network}</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="https://chkcd.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">CHKCD Framework</a></li>
-              <li><a href={`/${lang}/diagnostic`} className="hover:text-white transition-colors">{dict.footer.links.playground}</a></li>
-              <li><a href={`/${lang}/about`} className="hover:text-white transition-colors">{dict.footer.links.about}</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm flex flex-col md:flex-row justify-between items-center">
-          <p>© 2026 Kat3x AI Visibility Observatory. Version 1.0.</p>
-          <p className="mt-2 md:mt-0">{dict.footer.copyright}</p>
-        </div>
-      </footer>
+      <Footer lang={lang} />
     </div>
   );
 };

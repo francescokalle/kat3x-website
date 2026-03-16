@@ -2,6 +2,7 @@ import React from 'react';
 import { FlaskConical, Timer, Layers, BarChart3 } from 'lucide-react';
 import GlowTitle from '../../../components/GlowTitle';
 import Navbar from '../../../components/NavBar';
+import Footer from '@/app/components/Footer';
 
 // --- TRANSLATION DICTIONARIES ---
 const dictionaries: Record<string, any> = {
@@ -206,6 +207,7 @@ export default async function MethodologyPage({ params }: { params: Promise<{ la
           </div>
         </section>
       </main>
+      <Footer lang={lang} />
     </div>
   );
 }

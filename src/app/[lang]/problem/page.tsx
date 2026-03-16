@@ -2,6 +2,7 @@ import React from 'react';
 import { SearchX, ServerCrash, Bot, ArrowRight, Rabbit } from 'lucide-react';
 import GlowTitle from '../../components/GlowTitle';
 import Navbar from '@/app/components/NavBar';
+import Footer from '@/app/components/Footer';
 
 const dictionaries: Record<string, any> = {
   it: {
@@ -113,6 +114,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ lang: 
           </div>
         </section>
       </main>
+      <Footer lang={lang} />
     </div>
   );
 }
