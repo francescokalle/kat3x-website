@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rabbit } from 'lucide-react';
+import CatLogo from "@res/logo/CatLogo"
 
 // Dizionario integrato nell'elemento
 const navData: Record<string, any> = {
@@ -39,7 +40,11 @@ export default function Navbar({ lang }: NavbarProps) {
           href = {`/${lang}`}
           className="flex items-center gap-2 group transition-all"
         >
-          <Rabbit className="h-6 w-6 text-brand-600 group-hover:scale-110 transition-transform" />
+          <CatLogo 
+            viewBox="0 0 236 236" 
+            fill="currentColor"
+            className="h-12 w-12 text-brand-600 group-hover:scale-110 transition-transform" 
+          />
           <div className="flex flex-col sm:flex-row sm:items-center">
             <span className="font-bold text-xl tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">
               Kat3x

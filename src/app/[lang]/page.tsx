@@ -226,7 +226,6 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
           </div>
         </section>
       </main>
-
       <Footer lang={lang} />
     </div>
   );

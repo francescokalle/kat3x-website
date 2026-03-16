@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rabbit } from 'lucide-react';
+import CatLogo from '@res/logo/CatLogo';
 
 const footerData: Record<string, any> = {
   it: {
@@ -46,7 +47,11 @@ export default function Footer({ lang }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 mb-4">
-            <Rabbit className="h-5 w-5 text-brand-500" />
+            <CatLogo 
+              viewBox="0 0 236 236" 
+              fill="currentColor"
+              className="h-12 w-12 text-brand-600 group-hover:scale-110 transition-transform" 
+            />
             <span className="font-bold text-lg text-white">Kat3x</span>
           </div>
           <p className="text-sm leading-relaxed max-w-sm">
