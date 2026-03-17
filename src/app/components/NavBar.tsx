@@ -1,4 +1,5 @@
 import React from 'react';
+import { Rabbit } from 'lucide-react';
 import CatLogo from "@res/logo/CatLogo"
 
 // Dizionario integrato nell'elemento
@@ -28,6 +29,7 @@ interface NavbarProps {
 export default function Navbar({ lang }: NavbarProps) {
   // Fallback sull'inglese se la lingua non è supportata
   const dict = navData[lang] || navData.en;
+  const homePath = `/${lang}`;
 
   // Stile tipizzato per il cursore centrato a forma di cantiere (🏗️)
   // Nota: abbiamo aggiunto text-anchor, dominant-baseline e l'offset "16 16"
@@ -36,10 +38,10 @@ export default function Navbar({ lang }: NavbarProps) {
   };
 
   return (
-    <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+    <header className="bg-white/70 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
-        {/* LOGO & BRAND */}
+        {/* LOGO E BRAND - Entrambi puntano alla Home */}
         <a 
           href={`/${lang}`}
           className="flex items-center gap-2 group transition-all"
@@ -47,43 +49,57 @@ export default function Navbar({ lang }: NavbarProps) {
           <CatLogo 
             viewBox="0 0 236 236" 
             fill="currentColor"
-            className="h-10 w-10 text-brand-600 group-hover:scale-110 transition-transform" 
+            className="h-12 w-12 text-brand-600 group-hover:scale-110 transition-transform" 
           />
           <div className="flex flex-col sm:flex-row sm:items-center">
-            <span className="font-bold text-lg tracking-tight text-dark group-hover:text-brand-600 transition-colors">
+            <span className="font-bold text-xl tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">
               Kat3x
             </span>
-            <span className="hidden sm:inline-block text-sm text-mid sm:ml-2 sm:border-l sm:pl-2 border-slate-300">
+            <span className="hidden sm:inline-block text-sm text-slate-500 sm:ml-2 sm:border-l sm:pl-2 border-slate-300">
               {dict.tagline}
             </span>
           </div>
         </a>
 
-        {/* NAV LINKS */}
-        <nav className="hidden md:flex gap-6 text-sm font-medium text-mid">
+        {/* LINKS CENTRALI */}
+        <nav className="hidden md:flex gap-6 text-sm font-medium text-slate-600">
           <a href={`/${lang}/problem`} className="hover:text-brand-600 transition-colors">
             {dict.problem}
           </a>
           
+          {/* Link 1: Use Cases (Lavori in corso) */}
           <span 
-            className="opacity-50 transition-colors" 
+            className="group flex items-center gap-2 opacity-60 transition-colors" 
             style={disabledCursorStyle}
           >
-            <span className="pointer-events-none">{dict.useCases}</span>
+            <a href="#" className="pointer-events-none">
+              {dict.useCases}
+            </a>
           </span>
 
+          {/* Link 2: Methodology (Lavori in corso) */}
           <span 
-            className="opacity-50 transition-colors" 
+            className="group flex items-center gap-2 opacity-60 transition-colors" 
             style={disabledCursorStyle}
           >
-            <span className="pointer-events-none">{dict.methodology}</span>
+            <a href="#" className="pointer-events-none">
+              {dict.methodology}
+            </a>
           </span>
 
+          {/* Link 3: Standard (Lavori in corso) */}
           <span 
-            className="opacity-50 transition-colors" 
+            className="group flex items-center gap-2 opacity-60 transition-colors" 
             style={disabledCursorStyle}
           >
-            <span className="pointer-events-none">{dict.standard}</span>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="pointer-events-none"
+            >
+              {dict.standard}
+            </a>
           </span>
         </nav>
 
@@ -91,7 +107,7 @@ export default function Navbar({ lang }: NavbarProps) {
         <div>
           <a 
             href={`/${lang}/diagnostic`} 
-            className="bg-brand-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-700 transition-colors shadow-sm"
+            className="bg-brand-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-brand-700 transition-colors shadow-sm"
           >
             {dict.cta}
           </a>
