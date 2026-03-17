@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileText, Quote, ScanEye, Search, Share2, ShieldCheck } from 'lucide-react';
+import GlowTitle from '../components/GlowTitle';
 import Navbar from '../components/NavBar';
 import Footer from '../components/Footer';
 
@@ -8,12 +9,11 @@ import reportsData from '@res/data/reports/reports-data.json';
 const dictionaries: Record<string, any> = {
   it: {
     hero: {
-      badge: "AI Visibility Observatory",
       titleLine1: "L'Osservatorio indipendente",
       titleLine2: "sulla",
       highlight: "AI Citability",
       description: "Kat3x analizza e definisce come i Large Language Models mappano il tessuto produttivo. Applichiamo pratiche di Knowledge Seeding per trasformare l'invisibilità digitale in Semantic Recognition.",
-      quote: "Un'intelligenza artificiale non può citare ciò che non comprende. E non può comprendere ciò che non è strutturato."
+      quote: "Un’intelligenza artificiale non può citare ciò che non comprende. E non può comprendere ciò che non è strutturato."
     },
     identity: {
       title: "L'Architettura dell'Integrazione AI",
@@ -45,7 +45,6 @@ const dictionaries: Record<string, any> = {
   },
   en: {
     hero: {
-      badge: "AI Visibility Observatory",
       titleLine1: "The Independent Observatory",
       titleLine2: "on",
       highlight: "AI Citability",
@@ -83,156 +82,130 @@ const dictionaries: Record<string, any> = {
 };
 
 export default async function Kat3xHome({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params;
+  const { lang } = await params; 
   const dict = dictionaries[lang] || dictionaries.it;
 
   return (
-    <div className="min-h-screen font-sans selection:bg-brand-200">
-
-      <Navbar lang={lang} />
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200">
+      
+      <Navbar lang={lang}/>
 
       <main>
-
-        {/* ── HERO ─────────────────────────────────────────────── */}
-        <section className="bg-dark text-white py-28 sm:py-36 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto text-center">
-
-            {/* Eyebrow badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-1.5 text-sm text-muted mb-10 tracking-wide">
-              <span className="w-2 h-2 bg-brand-400 rounded-full" />
-              {dict.hero.badge}
-            </div>
-
-            {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-8">
-              {dict.hero.titleLine1}
-              <br className="hidden sm:block" />
-              {dict.hero.titleLine2}{' '}
-              <span className="text-brand-400">{dict.hero.highlight}</span>
-            </h1>
-
-            {/* Description */}
-            <p className="text-lg sm:text-xl text-muted max-w-3xl mx-auto mb-14 leading-relaxed">
-              {dict.hero.description}
-            </p>
-
-            {/* Quote */}
-            <blockquote className="border border-white/10 bg-white/5 rounded-2xl px-8 py-7 max-w-3xl mx-auto">
-              <p className="text-base sm:text-lg text-slate-300 italic leading-relaxed">
-                &ldquo;{dict.hero.quote}&rdquo;
-              </p>
+        {/* HERO SECTION */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+          <GlowTitle 
+            as="h1" 
+            className="text-6xl text-slate-900"
+            glowSize="px-40 py-28"
+            glowColor="100, 255, 100"
+          >
+            {dict.hero.titleLine1} <br className="hidden sm:block" /> {dict.hero.titleLine2} <span className="text-brand-600">{dict.hero.highlight}</span>
+          </GlowTitle>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-12">
+            {dict.hero.description}
+          </p>
+          
+          <div className="bg-brand-100 border-l-4 border-brand-600 p-6 max-w-4xl mx-auto text-left rounded-r-lg shadow-sm">
+            <blockquote className="text-lg sm:text-xl font-medium text-slate-800 italic">
+              "{dict.hero.quote}"
             </blockquote>
           </div>
         </section>
 
-        {/* ── IDENTITY ─────────────────────────────────────────── */}
-        <section className="py-24 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-dark tracking-tight">
-                {dict.identity.title}
-              </h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="border border-slate-200 rounded-2xl p-8 hover:border-brand-300 hover:shadow-sm transition-all">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="p-2.5 bg-brand-50 rounded-xl">
-                    <Search className="h-5 w-5 text-brand-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-dark">{dict.identity.kat3xTitle}</h3>
-                </div>
-                <p className="text-mid leading-relaxed">{dict.identity.kat3xDesc}</p>
+        {/* IDENTITY & ROLES SECTION */}
+        <section className="py-16 bg-white border-y border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">{dict.identity.title}</h2>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <Search className="h-5 w-5 text-brand-600" />
+                  {dict.identity.kat3xTitle}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  {dict.identity.kat3xDesc}
+                </p>
               </div>
-              <div className="border border-slate-200 rounded-2xl p-8 hover:border-brand-300 hover:shadow-sm transition-all">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="p-2.5 bg-brand-50 rounded-xl">
-                    <ShieldCheck className="h-5 w-5 text-brand-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-dark">{dict.identity.chkcdTitle}</h3>
-                </div>
-                <p className="text-mid leading-relaxed">{dict.identity.chkcdDesc}</p>
+              <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <ShieldCheck className="h-5 w-5 text-emerald-600" />
+                  {dict.identity.chkcdTitle}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  {dict.identity.chkcdDesc}
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── THE 3 PILLARS ────────────────────────────────────── */}
-        <section className="py-24 bg-surface">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-8">
-              <article className="bg-white rounded-2xl p-8 border border-slate-200 hover:shadow-sm transition-shadow">
-                <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
-                  <Share2 className="h-6 w-6 text-brand-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-dark mb-3">{dict.pillars.p1Title}</h3>
-                <p className="text-mid text-sm leading-relaxed">{dict.pillars.p1Desc}</p>
-              </article>
-              <article className="bg-white rounded-2xl p-8 border border-slate-200 hover:shadow-sm transition-shadow">
-                <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
-                  <ScanEye className="h-6 w-6 text-brand-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-dark mb-3">{dict.pillars.p2Title}</h3>
-                <p className="text-mid text-sm leading-relaxed">{dict.pillars.p2Desc}</p>
-              </article>
-              <article className="bg-white rounded-2xl p-8 border border-slate-200 hover:shadow-sm transition-shadow">
-                <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
-                  <Quote className="h-6 w-6 text-brand-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-dark mb-3">{dict.pillars.p3Title}</h3>
-                <p className="text-mid text-sm leading-relaxed">{dict.pillars.p3Desc}</p>
-              </article>
-            </div>
+        {/* THE 3 PILLARS */}
+        <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <article className="p-6">
+              <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Share2 className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">{dict.pillars.p1Title}</h3>
+              <p className="text-slate-600">{dict.pillars.p1Desc}</p>
+            </article>
+            <article className="p-6">
+              <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <ScanEye className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">{dict.pillars.p2Title}</h3>
+              <p className="text-slate-600">{dict.pillars.p2Desc}</p>
+            </article>
+            <article className="p-6">
+              <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Quote className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">{dict.pillars.p3Title}</h3>
+              <p className="text-slate-600">{dict.pillars.p3Desc}</p>
+            </article>
           </div>
         </section>
 
-        {/* ── REPORTS DASHBOARD ────────────────────────────────── */}
-        <section className="py-24 bg-dark text-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+        {/* EXPERIMENTS DASHBOARD */}
+        <section className="py-16 bg-slate-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-10">
               <div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-2">{dict.experiments.title}</h2>
-                <p className="text-muted">{dict.experiments.subtitle}</p>
+                <h2 className="text-3xl font-bold mb-2">{dict.experiments.title}</h2>
+                <p className="text-slate-400">{dict.experiments.subtitle}</p>
               </div>
-              <a
-                href={`/${lang}/knowledge/experiments`}
-                className="text-brand-400 hover:text-brand-300 font-medium mt-4 md:mt-0 flex items-center gap-1 transition-colors"
-              >
+              <a href={`/${lang}/knowledge/experiments`} className="text-brand-400 hover:text-brand-300 font-medium mt-4 md:mt-0 flex items-center gap-1">
                 {dict.experiments.viewAll} &rarr;
               </a>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
               {reportsData.map((report) => (
-                <div
-                  key={report.id}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col h-full hover:border-white/20 transition-colors"
-                >
-                  <div className="flex justify-between items-start mb-3">
-                    <div className="text-xs font-semibold text-brand-400 uppercase tracking-wider">
-                      {report.category}
-                    </div>
+                <div key={report.id} className="bg-slate-800 border border-slate-700 rounded-lg p-6 flex flex-col h-full">
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="text-xs font-semibold text-brand-400 uppercase tracking-wider">{report.category}</div>
                     {report.status === 'coming_soon' && (
-                      <span className="text-xs font-medium bg-white/10 text-slate-300 px-2.5 py-1 rounded-full">
+                      <span className="text-xs font-medium bg-slate-700 text-slate-300 px-2 py-1 rounded">
                         {dict.experiments.comingSoon}
                       </span>
                     )}
                   </div>
-                  <h3 className="text-base font-semibold mb-3">{report.title}</h3>
-                  <p className="text-sm text-muted mb-6 flex-grow leading-relaxed">{report.description}</p>
-
-                  {report.formats.length > 0 ? (
-                    <div className="flex gap-2 text-sm flex-wrap">
+                  <h3 className="text-lg font-bold mb-3">{report.title}</h3>
+                  <p className="text-sm text-slate-400 mb-6 flex-grow">{report.description}</p>
+                  
+                  {report.formats.length > 0 && (
+                    <div className="flex gap-3 text-sm flex-wrap">
                       {report.formats.map((format) => (
-                        <span
-                          key={format}
-                          className="flex items-center gap-1.5 text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg text-xs"
-                        >
-                          <FileText className="h-3.5 w-3.5" /> {format}
+                        <span key={format} className="flex items-center gap-1 text-slate-300 bg-slate-700 px-2 py-1 rounded">
+                          <FileText className="h-4 w-4"/> {format}
                         </span>
                       ))}
                     </div>
-                  ) : (
-                    <div className="text-xs text-slate-500 italic">{dict.experiments.processing}</div>
+                  )}
+                  {report.formats.length === 0 && (
+                    <div className="text-sm text-slate-500 italic">
+                      {dict.experiments.processing}
+                    </div>
                   )}
                 </div>
               ))}
@@ -240,24 +213,19 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
           </div>
         </section>
 
-        {/* ── CTA ──────────────────────────────────────────────── */}
-        <section className="py-24 bg-brand-600 text-white text-center px-4 sm:px-6">
+        {/* CTA SECTION */}
+        <section className="py-20 bg-brand-600 text-white text-center px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">{dict.ctaSection.title}</h2>
-            <p className="text-lg text-brand-100 mb-10 leading-relaxed max-w-xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6">{dict.ctaSection.title}</h2>
+            <p className="text-xl text-brand-100 mb-10">
               {dict.ctaSection.desc}
             </p>
-            <a
-              href={`/${lang}/diagnostic`}
-              className="inline-block bg-white text-brand-700 font-semibold text-base px-8 py-4 rounded-xl shadow-lg hover:bg-brand-50 transition-all"
-            >
+            <a href={`/${lang}/diagnostic`} className="inline-block bg-white text-brand-600 font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-slate-50 transition-all">
               {dict.ctaSection.button}
             </a>
           </div>
         </section>
-
       </main>
-
       <Footer lang={lang} />
     </div>
   );
