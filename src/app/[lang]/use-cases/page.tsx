@@ -3,6 +3,7 @@ import { Factory, UtensilsCrossed, Hotel, Code, ArrowRight } from 'lucide-react'
 import GlowTitle from '../../components/GlowTitle';
 import Navbar from '@/app/components/NavBar';
 import Footer from '@/app/components/Footer';
+import PageBackground from '../../components/PageBackground';
 
 const dictionaries: Record<string, any> = {
   it: {
@@ -68,25 +69,13 @@ export default async function UseCasesPage({ params }: { params: Promise<{ lang:
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
 
-      {/* --- BACKGROUND GLOBALE (DOT PATTERN + ORBS) --- */}
-      <div className="fixed inset-0 pointer-events-none -z-20"
-           style={{
-             backgroundImage: 'radial-gradient(circle, #cbd5e1 1px, transparent 1px)',
-             backgroundSize: '32px 32px',
-             opacity: 0.4
-           }}
-      />
-      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-brand-300/30 rounded-full mix-blend-multiply filter blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute top-[40%] left-[-15%] w-[500px] h-[500px] bg-emerald-300/20 rounded-full mix-blend-multiply filter blur-[120px] animate-pulse" style={{ animationDuration: '12s' }} />
-      </div>
+      <PageBackground />
     <Navbar lang={lang}/>
       <main className="pb-20">
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
           <GlowTitle 
             as="h1" 
             className="text-5xl md:text-6xl text-slate-900 mb-6"
-            glowSize="px-40 py-28"
             glowColor="100, 255, 100"
           >
             {dict.title}
