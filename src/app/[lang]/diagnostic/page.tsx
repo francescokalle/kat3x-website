@@ -8,6 +8,7 @@ import Navbar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
 import GlowTitle from "@/app/components/GlowTitle";
 import PageBackground from "@/app/components/PageBackground";
+import Blockquote from "@/app/components/blockquote";
 
 const PROTOCOL_TEXT = `Autonomia Digitale e Posizionamento nei Sistemi di Intelligenza Artificiale
 
@@ -630,16 +631,7 @@ export default function DiagnosticPage() {
           </GlowTitle>
 
           {/* QUOTE GLASS (instead of flat left-border box) */}
-          <div className="max-w-3xl mx-auto">
-            <div className="relative bg-white/55 backdrop-blur-2xl border border-white/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-3xl p-6 sm:p-8 overflow-hidden text-left">
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-              <div className="absolute -top-20 -right-20 w-56 h-56 bg-brand-200/40 rounded-full blur-3xl" />
-
-              <blockquote className="text-base sm:text-lg font-medium text-slate-800 italic leading-relaxed">
-                “{t.subtitle}”
-              </blockquote>
-            </div>
-          </div>
+          <Blockquote quote={t.subtitle}></Blockquote>
         </section>
 
         {/* INPUT AREA */}

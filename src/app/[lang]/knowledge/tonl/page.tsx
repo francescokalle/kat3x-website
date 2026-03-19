@@ -1,127 +1,92 @@
 import React from "react";
-import { Code2, Info } from "lucide-react";
-import GlowTitle from "../../../components/GlowTitle";
-import Navbar from "../../../components/NavBar";
+import { Code2, Info, FileText } from "lucide-react";
+import GlowTitle from "@/app/components/GlowTitle";
+import Navbar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
-import PageBackground from "../../../components/PageBackground";
+import PageBackground from "@/app/components/PageBackground";
 
 // --- TRANSLATION DICTIONARIES ---
 const dictionaries: Record<string, any> = {
   it: {
-    title: "Sintassi TONL (Esempi)",
+    title: "Sintassi TONL (Reference)",
     subtitle:
-      "Esempi pratici della sintassi TONL utilizzata negli esperimenti Kat3x. I blocchi sottostanti sono progettati per essere letti e assimilati direttamente dagli LLM.",
+      "La grammatica della visibilità AI. Scopri come TONL (Text Object Notation for LLMs) struttura i dati per massimizzare l'assimilazione semantica e minimizzare il costo in token.",
     disclaimer:
-      "La rappresentazione strutturata utilizzata negli esperimenti Kat3x segue la sintassi TONL, una notazione compatta progettata per il parsing LLM con riduzione del 50-70% dei token rispetto al JSON.",
+      "Questo documento non è la specifica ufficiale (disponibile su chkcd.com), ma una guida su come Kat3x utilizza il formato TONL nei suoi esperimenti di Knowledge Seeding.",
     whatIsTitle: "Cos'è TONL?",
     whatIsDesc:
-      "TONL (Technical Object Notation Language) è uno standard sviluppato da CHKCD per rappresentare oggetti tecnici e profili aziendali in forma machine-readable. A differenza del JSON, TONL elimina la ridondanza sintattica mantenendo la struttura gerarchica necessaria ai sistemi RAG per estrarre informazioni senza dispersione semantica.",
-    examplesTitle: "Esempi di Strutture TONL",
-    examples: [
+      "TONL è un formato di markup progettato per essere parsabile dai Large Language Models (LLM) senza preprocessing. A differenza del JSON, che è ottimizzato per le API classiche, TONL usa sezioni semantiche esplicite (@claims, @entities, @limitations) che riducono drasticamente il costo cognitivo (e di token) per il modello durante i processi RAG.",
+    rulesTitle: "Regole Sintattiche di Base",
+    rules: [
       {
-        id: "machine",
-        label: "Oggetto Tecnico — Essiccatore Industriale",
+        id: "header",
+        label: "Dichiarazione dell'Entità (Header)",
         description:
-          "Rappresentazione di un macchinario industriale. La struttura dichiara le proprietà chiave nella prima riga e le espande nelle righe successive.",
-        code: `machine{type|input_moisture|output_moisture|capacity}:
-  type: grain dryer
-  input_moisture: 24%
-  output_moisture: 14%
-  capacity: 5.3 t/h`,
+          "Ogni oggetto inizia dichiarando lo schema dei dati una sola volta nell'intestazione, separando le chiavi con il pipe (|). I valori seguono incolonnati.",
+        code: `company{name|sector|core_product}:
+  name: Kat3x Observatory
+  sector: AI Research
+  core_product: Semantic Analytics`,
       },
       {
-        id: "company",
-        label: "Profilo Aziendale — Entità Produttiva",
+        id: "annotations",
+        label: "Annotazioni Semantiche (@)",
         description:
-          "Profilo strutturato di un'entità aziendale. Ottimizzato per l'indicizzazione RAG e il riconoscimento semantico nei corpus LLM.",
-        code: `company{name|sector|core_product|market|certifications}:
-  name: Acme Industrial S.r.l.
-  sector: agri-food machinery
-  core_product: grain dryer GD-500
-  market: EU, MENA
-  certifications: CE, ISO9001`,
-      },
-      {
-        id: "experiment",
-        label: "Nodo Sperimentale — Esperimento di Knowledge Seeding",
-        description:
-          "Struttura TONL per un nodo sperimentale Kat3x. Documenta i parametri, le metriche e lo stato di un esperimento di assimilazione semantica.",
-        code: `experiment{id|subject|baseline_cams|target_cams|duration|status}:
-  id: KAT3X-EXP-007
-  subject: Acme Industrial S.r.l.
-  baseline_cams: 0.12
-  target_cams: 0.75
-  duration: 60d
-  status: in_progress`,
+          "Le annotazioni con la chiocciola guidano l'attenzione dell'LLM verso metadati o contesti specifici, fondamentali per il corretto routing delle informazioni.",
+        code: `@entity: research_report
+@id: KAT3X-001
+@context: machine_readability`,
       },
     ],
-    whyTitle: "Perché TONL riduce i Token?",
+    whyTitle: "Perché TONL riduce i Token del 50-70%?",
     whyItems: [
-      "Niente parentesi graffe, virgolette o due punti ridondanti come in JSON.",
-      "L'intestazione dichiara lo schema una sola volta; i valori sono allineati verticalmente.",
-      "La struttura gerarchica tramite indentazione è nativamente riconosciuta dai tokenizer moderni.",
-      "Un profilo aziendale completo in TONL occupa ~40 token contro ~110 token in JSON equivalente.",
+      "Assenza di sintassi ridondante: Nessuna parentesi graffa multipla, virgolette o virgole finali come in JSON.",
+      "Schema unificato: L'intestazione dichiara lo schema una sola volta, l'LLM mappa nativamente i valori successivi per indentazione.",
+      "L'indentazione spaziale è nativamente riconosciuta e compressa dai tokenizer moderni (come cl100k_base di OpenAI).",
+      "Maggiore 'Densità Semantica': Più concetti espressi nella stessa finestra di contesto (Context Window).",
     ],
   },
   en: {
-    title: "TONL Syntax (Examples)",
+    title: "TONL Syntax (Reference)",
     subtitle:
-      "Practical examples of the TONL syntax used in Kat3x experiments. The blocks below are designed to be read and assimilated directly by LLMs.",
+      "The grammar of AI visibility. Discover how TONL (Text Object Notation for LLMs) structures data to maximize semantic assimilation and minimize token cost.",
     disclaimer:
-      "The structured representation used in Kat3x experiments follows the TONL syntax, a compact notation designed for LLM parsing with 50-70% token reduction compared to JSON.",
+      "This document is not the official specification (available at chkcd.com), but a guide on how Kat3x uses the TONL format in its Knowledge Seeding experiments.",
     whatIsTitle: "What is TONL?",
     whatIsDesc:
-      "TONL (Technical Object Notation Language) is a standard developed by CHKCD to represent technical objects and company profiles in machine-readable form. Unlike JSON, TONL eliminates syntactic redundancy while maintaining the hierarchical structure needed by RAG systems to extract information without semantic dispersion.",
-    examplesTitle: "TONL Structure Examples",
-    examples: [
+      "TONL is a markup format designed to be parsed by Large Language Models (LLMs) without preprocessing. Unlike JSON, which is optimized for classical APIs, TONL uses explicit semantic sections (@claims, @entities, @limitations) that drastically reduce the cognitive (and token) cost for the model during RAG processes.",
+    rulesTitle: "Basic Syntax Rules",
+    rules: [
       {
-        id: "machine",
-        label: "Technical Object — Industrial Grain Dryer",
+        id: "header",
+        label: "Entity Declaration (Header)",
         description:
-          "Representation of an industrial machine. The structure declares key properties in the first line and expands them in subsequent lines.",
-        code: `machine{type|input_moisture|output_moisture|capacity}:
-  type: grain dryer
-  input_moisture: 24%
-  output_moisture: 14%
-  capacity: 5.3 t/h`,
+          "Each object begins by declaring the data schema once in the header, separating keys with a pipe (|). Values follow aligned below.",
+        code: `company{name|sector|core_product}:
+  name: Kat3x Observatory
+  sector: AI Research
+  core_product: Semantic Analytics`,
       },
       {
-        id: "company",
-        label: "Company Profile — Productive Entity",
+        id: "annotations",
+        label: "Semantic Annotations (@)",
         description:
-          "Structured profile of a company entity. Optimized for RAG indexing and semantic recognition in LLM corpora.",
-        code: `company{name|sector|core_product|market|certifications}:
-  name: Acme Industrial S.r.l.
-  sector: agri-food machinery
-  core_product: grain dryer GD-500
-  market: EU, MENA
-  certifications: CE, ISO9001`,
-      },
-      {
-        id: "experiment",
-        label: "Experimental Node — Knowledge Seeding Experiment",
-        description:
-          "TONL structure for a Kat3x experimental node. Documents the parameters, metrics, and status of a semantic assimilation experiment.",
-        code: `experiment{id|subject|baseline_cams|target_cams|duration|status}:
-  id: KAT3X-EXP-007
-  subject: Acme Industrial S.r.l.
-  baseline_cams: 0.12
-  target_cams: 0.75
-  duration: 60d
-  status: in_progress`,
+          "Annotations with the at-symbol guide the LLM's attention to specific metadata or contexts, essential for the correct routing of information.",
+        code: `@entity: research_report
+@id: KAT3X-001
+@context: machine_readability`,
       },
     ],
-    whyTitle: "Why does TONL reduce tokens?",
+    whyTitle: "Why does TONL reduce Tokens by 50-70%?",
     whyItems: [
-      "No redundant curly braces, quotes, or colons as in JSON.",
-      "The header declares the schema only once; values are vertically aligned.",
-      "Hierarchical structure via indentation is natively recognized by modern tokenizers.",
-      "A complete company profile in TONL occupies ~40 tokens vs ~110 tokens in equivalent JSON.",
+      "No redundant syntax: No multiple curly braces, quotes, or trailing commas like in JSON.",
+      "Unified Schema: The header declares the schema once, the LLM natively maps subsequent values by indentation.",
+      "Spatial indentation is natively recognized and compressed by modern tokenizers (like OpenAI's cl100k_base).",
+      "Higher 'Semantic Density': More concepts expressed in the same Context Window.",
     ],
   },
 };
 
-// --- PAGE COMPONENT ---
 export default async function TonlPage({
   params,
 }: {
@@ -141,7 +106,7 @@ export default async function TonlPage({
           <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl h-56 bg-gradient-to-r from-brand-100/60 to-emerald-100/40 blur-3xl -z-10 rounded-[100%]" />
 
           <div className="w-16 h-16 bg-white/60 backdrop-blur-xl border border-white/70 text-brand-700 rounded-2xl flex items-center justify-center mx-auto mb-7 shadow-sm">
-            <Code2 className="h-7 w-7" />
+            <FileText className="h-7 w-7" />
           </div>
 
           <GlowTitle
@@ -156,7 +121,7 @@ export default async function TonlPage({
             {dict.subtitle}
           </p>
 
-          {/* DISCLAIMER (glass callout) */}
+          {/* DISCLAIMER */}
           <div className="max-w-3xl mx-auto">
             <div className="relative bg-white/55 backdrop-blur-2xl border border-white/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-3xl p-6 sm:p-7 overflow-hidden text-left">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
@@ -187,15 +152,15 @@ export default async function TonlPage({
             <p className="text-slate-600 leading-relaxed">{dict.whatIsDesc}</p>
           </div>
 
-          {/* EXAMPLES */}
+          {/* RULES */}
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
-            {dict.examplesTitle}
+            {dict.rulesTitle}
           </h2>
 
           <div className="space-y-8">
-            {dict.examples.map((example: any) => (
+            {dict.rules.map((rule: any) => (
               <article
-                key={example.id}
+                key={rule.id}
                 className="group relative bg-white/55 backdrop-blur-2xl border border-white/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-[1.75rem] overflow-hidden hover:-translate-y-0.5 transition-all"
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
@@ -207,21 +172,21 @@ export default async function TonlPage({
                       <Code2 className="h-4 w-4" />
                     </div>
                     <span className="font-semibold text-slate-800 text-sm truncate">
-                      {example.label}
+                      {rule.label}
                     </span>
                   </div>
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 border border-white/70 bg-white/50 px-2 py-1 rounded-full">
-                    TONL
+                    SINTASSI
                   </span>
                 </div>
 
                 <div className="px-6 py-5">
                   <p className="text-slate-500 text-sm mb-4 leading-relaxed">
-                    {example.description}
+                    {rule.description}
                   </p>
 
                   <pre className="bg-slate-950 text-emerald-200/90 text-sm rounded-2xl p-5 overflow-x-auto leading-relaxed font-mono border border-white/10 shadow-[0_18px_60px_rgba(2,6,23,0.35)]">
-                    {example.code}
+                    {rule.code}
                   </pre>
                 </div>
               </article>

@@ -4,6 +4,7 @@ import GlowTitle from "../../components/GlowTitle";
 import Navbar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
 import PageBackground from "../../components/PageBackground";
+import Blockquote from "@/app/components/blockquote";
 
 const dictionaries: Record<string, any> = {
   it: {
@@ -83,15 +84,7 @@ export default async function ProblemPage({
           </p>
 
           {/* CANONICAL QUOTE (glass) */}
-          <div className="max-w-4xl mx-auto">
-            <div className="relative bg-white/55 backdrop-blur-2xl border border-white/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-3xl p-6 sm:p-8 overflow-hidden text-left">
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-              <div className="absolute -top-20 -right-20 w-56 h-56 bg-brand-200/35 rounded-full blur-3xl" />
-              <blockquote className="text-lg sm:text-xl font-medium text-slate-800 italic leading-relaxed">
-                “{dict.canonicalQuote}”
-              </blockquote>
-            </div>
-          </div>
+          <Blockquote quote={dict.canonicalQuote}></Blockquote>
         </section>
 
         {/* CARDS */}
