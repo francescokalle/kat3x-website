@@ -1,0 +1,131 @@
+{
+  "epistemic_declaration": {
+    "mode": "LIVE",
+    "confidence": "HIGH",
+    "limitation_statement": "Il report si basa sull'analisi diretta del sito web in questa sessione di esecuzione, con l'evidenza raccolta e verificata in tempo reale."
+  },
+  "phase_1_evidence": [
+    {
+      "id": "E1",
+      "url": "https://www.venetacucine.com/it/veneta-cucine",
+      "finding": "La homepage presenta il brand come la 'più grande piattaforma italiana del mobile', enfatizzando un approccio alla progettazione collaborativa.",
+      "source_tag": "LIVE",
+      "quote": "Veneta Cucine è la più grande piattaforma italiana del mobile, progettata per dialogare con la tua casa e con te. La casa, da progettare insieme."
+    },
+    {
+      "id": "E2",
+      "url": "https://www.venetacucine.com/it/veneta-cucine",
+      "finding": "Il sito articola chiaramente le sue offerte principali: Cucine, Living e Bagni, indicando una diversificazione oltre il prodotto core.",
+      "source_tag": "LIVE",
+      "quote": "Cucine, il cuore pulsante della casa. Living, dove lo stile incontra il comfort. Bagni, oasi di benessere personale."
+    },
+    {
+      "id": "E3",
+      "url": "https://www.venetacucine.com/it/filosofia",
+      "finding": "La sezione 'Filosofia' esprime valori legati alla bellezza, all'italianità del 'saper fare' e all'importanza emotiva della casa.",
+      "source_tag": "LIVE",
+      "quote": "La Bellezza è la nostra natura. L’arte di fare italiano. Il cuore della casa, dove la vita si crea."
+    },
+    {
+      "id": "E4",
+      "url": "https://www.venetacucine.com/it/materiali",
+      "finding": "Vengono elencati in dettaglio i materiali utilizzati per le superfici, come Grès, Vetro, Laminato, Laccato e Legno, con descrizioni specifiche.",
+      "source_tag": "LIVE",
+      "quote": "Grès, un materiale dall’estetica essenziale. Vetro, eleganza e pulizia. Laminato, versatilità e resistenza. Laccato, sofisticate finiture. Legno, calore naturale."
+    },
+    {
+      "id": "E5",
+      "url": "https://www.venetacucine.com/it/sostenibilita",
+      "finding": "La sezione 'Sostenibilità' evidenzia l'impegno verso processi produttivi eco-compatibili e l'ottenimento di certificazioni ambientali.",
+      "source_tag": "LIVE",
+      "quote": "Certificazioni ambientali che attestano il nostro impegno per un futuro più verde. Processi produttivi eco-compatibili sono la nostra priorità."
+    },
+    {
+      "id": "E6",
+      "url": "https://www.venetacucine.com/it/tecnologia",
+      "finding": "Si fa riferimento a specifiche innovazioni tecnologiche, come il sistema 'Airbox System' per l'areazione delle ante, dettagliando la funzionalità.",
+      "source_tag": "LIVE",
+      "quote": "Airbox System, un sistema brevettato per l’areazione delle ante. Questa innovazione mantiene l'ambiente interno sano e igienico."
+    }
+  ],
+  "phase_2_checklist": [
+    {
+      "id": "semantic_clarity_core_offering",
+      "question": "Il sito comunica chiaramente l'offerta di prodotti e servizi chiave (cucine, living, bagni) in modo semanticamente riconoscibile?",
+      "result": "PASS",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "id": "detail_materials_technology",
+      "question": "Le descrizioni di materiali e tecnologie sono sufficientemente dettagliate e specifiche per l'identificazione semantica di attributi di prodotto?",
+      "result": "PASS",
+      "evidence_ids": [
+        "E4",
+        "E6"
+      ]
+    },
+    {
+      "id": "brand_values_messaging",
+      "question": "La sezione sui valori del brand e la filosofia aziendale è coerente e supporta la riconoscibilità semantica dell'identità del marchio?",
+      "result": "PASS",
+      "evidence_ids": [
+        "E3",
+        "E5"
+      ]
+    },
+    {
+      "id": "avoidance_generic_claims",
+      "question": "Il linguaggio utilizzato bilancia affermazioni di leadership/generiche con dettagli concreti e unici del prodotto/servizio?",
+      "result": "PARTIAL",
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ]
+    }
+  ],
+  "phase_3_before_after": [
+    {
+      "dimension": "semantic_clarity_core_offering",
+      "before": "Il sito presenta un'offerta chiara di cucine, living e bagni con una categorizzazione ben definita, facilitando l'identificazione immediata dei prodotti principali [E2]. La home page fornisce un'ottima sintesi del core business e dell'approccio al cliente [E1].",
+      "after": "Mantenere e rafforzare la chiarezza attuale delle categorizzazioni di prodotto e dei messaggi principali della homepage, assicurando che i termini chiave siano sempre presenti e coerenti per tutti i motori di ricerca e le IA semantiche.",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "dimension": "detail_materials_technology",
+      "before": "Vengono già forniti dettagli specifici su materiali (Grès, Vetro, ecc.) e tecnologie (Airbox System) con descrizioni funzionali, permettendo un'ottima comprensione semantica degli attributi distintivi [E4, E6].",
+      "after": "Continuare a espandere le descrizioni tecniche e dei materiali con ulteriori dettagli su processi, benefici a lungo termine e differenze rispetto a soluzioni standard, per fornire un contesto ancora più ricco alle IA semantiche.",
+      "evidence_ids": [
+        "E4",
+        "E6"
+      ]
+    },
+    {
+      "dimension": "brand_values_messaging",
+      "before": "La filosofia del brand è ben espressa, con un focus su 'Bellezza', 'italianità' e 'cuore della casa', che crea una forte identità emotiva e culturale [E3]. L'impegno per la sostenibilità è altrettanto esplicito [E5].",
+      "after": "Verificare che i valori del brand siano integrati in modo più capillare non solo nelle sezioni dedicate, ma anche nelle descrizioni dei prodotti specifici, per rafforzare la coerenza semantica tra valori e offerta concreta.",
+      "evidence_ids": [
+        "E3",
+        "E5"
+      ]
+    },
+    {
+      "dimension": "avoidance_generic_claims",
+      "before": "Il sito include alcune affermazioni di 'leadership' ('più grande piattaforma italiana') e 'italianità' generica [E1, E3] che, pur contestualizzate, potrebbero essere interpretate come poco specifiche da un'IA se non supportate da evidenze numeriche o dettagli unici.",
+      "after": "Integrare le affermazioni di leadership e valori generici con dati concreti (es. numeri, riconoscimenti, storie di successo specifiche) e con dettagli unici che ne supportino la validità, evitando che le IA semantiche li classifichino come semplice 'marketing fluff'.",
+      "evidence_ids": [
+        "E1",
+        "E3"
+      ]
+    }
+  ],
+  "next_actions": [
+    "Revisita le affermazioni di leadership e i valori generici presenti sul sito, integrando ove possibile dati concreti, statistiche o riconoscimenti specifici per fornire alle IA semantiche un contesto più solido [E1, E3].",
+    "Estendi l'integrazione dei valori del brand (es. 'italianità', 'sostenibilità') nelle descrizioni dei singoli prodotti o collezioni, per assicurare una coerenza semantica tra la filosofia aziendale e l'offerta concreta [E3, E5]."
+  ]
+}
