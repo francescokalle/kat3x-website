@@ -1,117 +1,155 @@
-import React from 'react';
-import { SearchX, ServerCrash, Bot, ArrowRight, Rabbit } from 'lucide-react';
-import GlowTitle from '../../components/GlowTitle';
-import Navbar from '@/app/components/NavBar';
-import Footer from '@/app/components/Footer';
-import PageBackground from '../../components/PageBackground';
+import React from "react";
+import { SearchX, ServerCrash, Bot, ArrowRight } from "lucide-react";
+import GlowTitle from "../../components/GlowTitle";
+import Navbar from "@/app/components/NavBar";
+import Footer from "@/app/components/Footer";
+import PageBackground from "../../components/PageBackground";
 
 const dictionaries: Record<string, any> = {
   it: {
     titleLine1: "Il Problema",
     titleLine2: "dell'",
     highlight: "Invisibilità",
-    subtitle: "Perché le architetture web tradizionali falliscono nell'era dell'AI Generativa.",
-    canonicalQuote: "Un’intelligenza artificiale non può citare ciò che non comprende. E non può comprendere ciò che non è strutturato.",
+    subtitle:
+      "Perché le architetture web tradizionali falliscono nell'era dell'AI Generativa.",
+    canonicalQuote:
+      "Un’intelligenza artificiale non può citare ciò che non comprende. E non può comprendere ciò che non è strutturato.",
     sections: {
       s1Title: "L'Illusione del Design",
-      s1Desc: "Un sito web visivamente perfetto per un essere umano è spesso un blocco incomprensibile per un LLM. Modelli come ChatGPT o Claude non 'guardano' il tuo sito, ne analizzano i nodi semantici crudi. Se mancano, la tua azienda scompare.",
+      s1Desc:
+        "Un sito web visivamente perfetto per un essere umano è spesso un blocco incomprensibile per un LLM. Modelli come ChatGPT o Claude non 'guardano' il tuo sito, ne analizzano i nodi semantici crudi. Se mancano, la tua azienda scompare.",
       s2Title: "La Crisi del RAG",
-      s2Desc: "Quando un utente chiede a un AI 'Qual è il miglior fornitore per...', l'AI interroga i propri dataset. Se le informazioni della tua azienda non sono strutturate, l'AI sceglierà un concorrente con dati più leggibili.",
+      s2Desc:
+        "Quando un utente chiede a un AI 'Qual è il miglior fornitore per...', l'AI interroga i propri dataset. Se le informazioni della tua azienda non sono strutturate, l'AI sceglierà un concorrente con dati più leggibili.",
       s3Title: "Perdita di Potere Decisionale",
-      s3Desc: "Nel 2026, la ricerca passa da interfacce conversazionali. Non essere citabili da un AI significa essere esclusi all'origine dal processo decisionale dei clienti B2B e B2C."
+      s3Desc:
+        "Nel 2026, la ricerca passa da interfacce conversazionali. Non essere citabili da un AI significa essere esclusi all'origine dal processo decisionale dei clienti B2B e B2C.",
     },
-    cta: "Scopri la Metodologia Kat3x"
+    cta: "Scopri la Metodologia Kat3x",
   },
   en: {
     titleLine1: "The Problem",
     titleLine2: "of",
     highlight: "Invisibility",
     subtitle: "Why traditional web architectures fail in the era of Generative AI.",
-    canonicalQuote: "An artificial intelligence cannot cite what it does not understand. And it cannot understand what is not structured.",
+    canonicalQuote:
+      "An artificial intelligence cannot cite what it does not understand. And it cannot understand what is not structured.",
     sections: {
       s1Title: "The Illusion of Design",
-      s1Desc: "A visually perfect website for a human is often an incomprehensible block for an LLM. Models like ChatGPT or Claude don't 'look' at your site; they analyze raw semantic nodes. If they are missing, your company disappears.",
+      s1Desc:
+        "A visually perfect website for a human is often an incomprehensible block for an LLM. Models like ChatGPT or Claude don't 'look' at your site; they analyze raw semantic nodes. If they are missing, your company disappears.",
       s2Title: "The RAG Crisis",
-      s2Desc: "When a user asks an AI 'Who is the best provider for...', the AI queries its datasets. If your company's information isn't structured, the AI will choose a competitor with more readable data.",
+      s2Desc:
+        "When a user asks an AI 'Who is the best provider for...', the AI queries its datasets. If your company's information isn't structured, the AI will choose a competitor with more readable data.",
       s3Title: "Loss of Decisional Power",
-      s3Desc: "In 2026, search goes through conversational interfaces. Not being citable by an AI means being excluded at the origin from the decision-making process of clients."
+      s3Desc:
+        "In 2026, search goes through conversational interfaces. Not being citable by an AI means being excluded at the origin from the decision-making process of clients.",
     },
-    cta: "Discover Kat3x Methodology"
-  }
+    cta: "Discover Kat3x Methodology",
+  },
 };
 
-export default async function ProblemPage({ params }: { params: Promise<{ lang: string }> }) {
+export default async function ProblemPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   const dict = dictionaries[lang] || dictionaries.it;
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
-
       <PageBackground />
+      <Navbar lang={lang} />
 
-    <Navbar lang={lang}/>
-      <main className="pb-20">
-        {/* HEADER SECTION */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-          <GlowTitle 
+      <main className="pb-24">
+        {/* HEADER / HERO */}
+        <section className="relative pt-24 pb-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+          {/* soft orb behind hero */}
+          <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl h-56 bg-gradient-to-r from-brand-100/60 to-emerald-100/40 blur-3xl -z-10 rounded-[100%]" />
+
+          <GlowTitle
             as="h1"
-            className="text-5xl md:text-6xl text-slate-900 mb-6"
+            className="text-5xl md:text-7xl text-slate-900 mb-6 tracking-tight leading-[1.05]"
             glowColor="100, 255, 100"
           >
-            {dict.titleLine1} <br className="hidden sm:block" /> {dict.titleLine2} <span className="text-brand-600">{dict.highlight}</span>
+            {dict.titleLine1}{" "}
+            <br className="hidden sm:block" /> {dict.titleLine2}{" "}
+            <span className="text-brand-600">{dict.highlight}</span>
           </GlowTitle>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-12">
+
+          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed">
             {dict.subtitle}
           </p>
-          
-          {/* CANONICAL QUOTE (Stesso stile della Home) */}
-          <div className="bg-brand-100 border-l-4 border-brand-600 p-6 max-w-4xl mx-auto text-left rounded-r-lg shadow-sm">
-            <blockquote className="text-lg sm:text-xl font-medium text-slate-800 italic">
-              "{dict.canonicalQuote}"
-            </blockquote>
+
+          {/* CANONICAL QUOTE (glass) */}
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-white/55 backdrop-blur-2xl border border-white/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-3xl p-6 sm:p-8 overflow-hidden text-left">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
+              <div className="absolute -top-20 -right-20 w-56 h-56 bg-brand-200/35 rounded-full blur-3xl" />
+              <blockquote className="text-lg sm:text-xl font-medium text-slate-800 italic leading-relaxed">
+                “{dict.canonicalQuote}”
+              </blockquote>
+            </div>
           </div>
         </section>
 
-        {/* CARDS SECTION (Stesso stile Identity / Pillars della Home) */}
-        <section className="py-16 relative">
+        {/* CARDS */}
+        <section className="py-10 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+              {/* Card 1 */}
+              <div className="group relative bg-white/55 backdrop-blur-2xl border border-white/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-[1.75rem] p-8 overflow-hidden hover:-translate-y-0.5 transition-all">
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-                <div className="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mb-6">
+                <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-red-200/25 rounded-full blur-3xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                <div className="w-12 h-12 bg-white/60 backdrop-blur-md border border-white/70 text-red-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                   <SearchX className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-slate-900">{dict.sections.s1Title}</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {dict.sections.s1Desc}
-                </p>
+
+                <h3 className="text-xl font-bold mb-3 text-slate-900">
+                  {dict.sections.s1Title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">{dict.sections.s1Desc}</p>
               </div>
-              
-              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+
+              {/* Card 2 */}
+              <div className="group relative bg-white/55 backdrop-blur-2xl border border-white/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-[1.75rem] p-8 overflow-hidden hover:-translate-y-0.5 transition-all">
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-                <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-6">
+                <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-orange-200/25 rounded-full blur-3xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                <div className="w-12 h-12 bg-white/60 backdrop-blur-md border border-white/70 text-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                   <ServerCrash className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-slate-900">{dict.sections.s2Title}</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {dict.sections.s2Desc}
-                </p>
+
+                <h3 className="text-xl font-bold mb-3 text-slate-900">
+                  {dict.sections.s2Title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">{dict.sections.s2Desc}</p>
               </div>
-              
-              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+
+              {/* Card 3 */}
+              <div className="group relative bg-white/55 backdrop-blur-2xl border border-white/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] rounded-[1.75rem] p-8 overflow-hidden hover:-translate-y-0.5 transition-all">
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-                <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mb-6">
+                <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-brand-200/25 rounded-full blur-3xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                <div className="w-12 h-12 bg-white/60 backdrop-blur-md border border-white/70 text-brand-700 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                   <Bot className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-slate-900">{dict.sections.s3Title}</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {dict.sections.s3Desc}
-                </p>
+
+                <h3 className="text-xl font-bold mb-3 text-slate-900">
+                  {dict.sections.s3Title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">{dict.sections.s3Desc}</p>
               </div>
             </div>
 
+            {/* CTA */}
             <div className="text-center pt-16">
-              <a href={`/${lang}/knowledge/methodology`} className="inline-flex items-center space-x-2 text-brand-600 hover:text-brand-700 font-medium text-lg transition-colors">
+              <a
+                href={`/${lang}/knowledge/methodology`}
+                className="inline-flex items-center gap-2 text-brand-700 hover:text-brand-800 font-semibold text-lg transition-colors"
+              >
                 <span>{dict.cta}</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -119,6 +157,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ lang: 
           </div>
         </section>
       </main>
+
       <Footer lang={lang} />
     </div>
   );
