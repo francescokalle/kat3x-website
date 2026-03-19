@@ -3,6 +3,7 @@ import { FlaskConical, Timer, Layers, BarChart3 } from 'lucide-react';
 import GlowTitle from '../../../components/GlowTitle';
 import Navbar from '../../../components/NavBar';
 import Footer from '@/app/components/Footer';
+import PageBackground from '../../../components/PageBackground';
 
 // --- TRANSLATION DICTIONARIES ---
 const dictionaries: Record<string, any> = {
@@ -144,7 +145,10 @@ export default async function MethodologyPage({ params }: { params: Promise<{ la
   const dict = dictionaries[lang] || dictionaries.it;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
+
+      <PageBackground />
+
       <Navbar lang={lang} />
 
       <main className="pb-20">
@@ -156,7 +160,6 @@ export default async function MethodologyPage({ params }: { params: Promise<{ la
           <GlowTitle
             as="h1"
             className="text-4xl md:text-5xl text-slate-900 mb-6"
-            glowSize="px-32 py-24"
             glowColor="100, 255, 100"
           >
             {dict.title}
@@ -177,8 +180,9 @@ export default async function MethodologyPage({ params }: { params: Promise<{ la
               return (
                 <article
                   key={phase.id}
-                  className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm"
+                  className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden"
                 >
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-10 h-10 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center shrink-0">
                       <Icon className="h-5 w-5" />

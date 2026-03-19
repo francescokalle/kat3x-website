@@ -3,6 +3,7 @@ import { BookOpen } from 'lucide-react';
 import GlowTitle from '../../../components/GlowTitle';
 import Navbar from '../../../components/NavBar';
 import Footer from '@/app/components/Footer';
+import PageBackground from '../../../components/PageBackground';
 
 // --- TRANSLATION DICTIONARIES ---
 const dictionaries: Record<string, any> = {
@@ -104,7 +105,10 @@ export default async function GlossaryPage({ params }: { params: Promise<{ lang:
   const dict = dictionaries[lang] || dictionaries.it;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
+
+      <PageBackground />
+
       <Navbar lang={lang} />
 
       <main className="pb-20">
@@ -116,7 +120,6 @@ export default async function GlossaryPage({ params }: { params: Promise<{ lang:
           <GlowTitle
             as="h1"
             className="text-4xl md:text-5xl text-slate-900 mb-6"
-            glowSize="px-32 py-24"
             glowColor="100, 255, 100"
           >
             {dict.title}
@@ -135,8 +138,9 @@ export default async function GlossaryPage({ params }: { params: Promise<{ lang:
             {dict.terms.map((item: any) => (
               <div
                 key={item.term}
-                className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm"
+                className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-6 overflow-hidden"
               >
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <dt className="mb-1">
                   <span className="text-xl font-bold text-brand-600">{item.term}</span>
                   {item.fullName && item.fullName !== item.term && (

@@ -3,6 +3,7 @@ import { ScanEye, Scale, AlertCircle, BarChart3, Workflow, BookOpenCheck, FileCh
 import GlowTitle from '../../components/GlowTitle';
 import Navbar from '@/app/components/NavBar';
 import Footer from '@/app/components/Footer';
+import PageBackground from '../../components/PageBackground';
 
 const dictionaries: Record<string, any> = {
   it: {
@@ -54,8 +55,9 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   const dict = dictionaries[lang] || dictionaries.it;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200">
-    
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
+
+      <PageBackground />
     <Navbar lang={lang}/>
 
       <main className="pb-20">
@@ -63,7 +65,6 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           <GlowTitle 
             as="h1" 
             className="text-5xl md:text-6xl text-slate-900 mb-6"
-            glowSize="px-40 py-28"
             glowColor="100, 255, 100"
           >
             {dict.title1} <span className='text-brand-600'>{dict.titleHiglight}</span> {dict.title2}
@@ -79,12 +80,13 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           </div>
         </section>
 
-        <section className="py-16 bg-white border-y border-slate-200">
+        <section className="py-16 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
               
               {/* Card Kat3x */}
-              <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
+              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mb-6">
                   <ScanEye className="h-6 w-6" />
                 </div>
@@ -103,7 +105,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </div>
               
               {/* Card CHKCD */}
-              <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
+              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-6">
                   <Scale className="h-6 w-6" />
                 </div>

@@ -43,7 +43,7 @@ export default function Footer({ lang }: FooterProps) {
   const dict = footerData[lang] || footerData.en;
 
   return (
-    <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+    <footer className="bg-slate-950/95 backdrop-blur-xl text-slate-400 py-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 mb-4">

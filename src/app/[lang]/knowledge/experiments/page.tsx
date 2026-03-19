@@ -5,6 +5,7 @@ import { FileText, Search, X } from 'lucide-react';
 import Navbar from '@/app/components/NavBar';
 import reportsData from '@res/data/reports/reports-data.json';
 import Footer from '@/app/components/Footer';
+import PageBackground from '@/app/components/PageBackground';
 
 interface Report {
   id: string;
@@ -111,7 +112,10 @@ export default function ReportsPageClient({ lang }: ReportsPageClientProps) {
     !!searchQuery || !!selectedCategory || selectedTags.length > 0;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
+
+      <PageBackground />
+
       <Navbar lang={lang} />
 
       <main>
@@ -126,7 +130,7 @@ export default function ReportsPageClient({ lang }: ReportsPageClientProps) {
         </section>
 
         {/* SEARCH & FILTER BAR */}
-        <section className="py-8 bg-white border-y border-slate-200">
+        <section className="py-8 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Search input */}
             <div className="relative mb-6">
@@ -136,7 +140,7 @@ export default function ReportsPageClient({ lang }: ReportsPageClientProps) {
                 placeholder={dict.search.placeholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-lg bg-slate-50 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-shadow"
+                className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-lg bg-white/50 backdrop-blur-md text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-shadow"
               />
             </div>
 
@@ -198,7 +202,7 @@ export default function ReportsPageClient({ lang }: ReportsPageClientProps) {
         </section>
 
         {/* REPORTS GRID */}
-        <section className="py-16 bg-slate-900 text-white">
+        <section className="py-16 bg-slate-900/90 backdrop-blur-sm text-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Results count */}
             {hasActiveFilters && (
@@ -216,10 +220,11 @@ export default function ReportsPageClient({ lang }: ReportsPageClientProps) {
                 {filteredReports.map((report) => (
                   <article
                     key={report.id}
-                    className={`bg-slate-800 border border-slate-700 rounded-lg p-6 flex flex-col h-full transition-opacity ${
+                    className={`relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-6 flex flex-col h-full transition-all overflow-hidden ${
                       report.status === 'coming_soon' ? 'opacity-70' : ''
                     }`}
                   >
+                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                     {/* Category + Coming Soon badge */}
                     <div className="flex justify-between items-start mb-2">
                       <div className="text-xs font-semibold text-brand-400 uppercase tracking-wider">

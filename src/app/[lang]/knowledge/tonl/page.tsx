@@ -3,6 +3,7 @@ import { Code2, Info } from 'lucide-react';
 import GlowTitle from '../../../components/GlowTitle';
 import Navbar from '../../../components/NavBar';
 import Footer from '@/app/components/Footer';
+import PageBackground from '../../../components/PageBackground';
 
 // --- TRANSLATION DICTIONARIES ---
 const dictionaries: Record<string, any> = {
@@ -126,7 +127,10 @@ export default async function TonlPage({ params }: { params: Promise<{ lang: str
   const dict = dictionaries[lang] || dictionaries.it;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
+
+      <PageBackground />
+
       <Navbar lang={lang} />
 
       <main className="pb-20">
@@ -138,7 +142,6 @@ export default async function TonlPage({ params }: { params: Promise<{ lang: str
           <GlowTitle
             as="h1"
             className="text-4xl md:text-5xl text-slate-900 mb-6"
-            glowSize="px-32 py-24"
             glowColor="100, 255, 100"
           >
             {dict.title}
@@ -156,7 +159,8 @@ export default async function TonlPage({ params }: { params: Promise<{ lang: str
 
         {/* WHAT IS TONL */}
         <section className="py-4 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm mb-8">
+          <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden mb-8">
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
             <h2 className="text-2xl font-bold text-slate-900 mb-4">{dict.whatIsTitle}</h2>
             <p className="text-slate-600 leading-relaxed">{dict.whatIsDesc}</p>
           </div>
@@ -167,8 +171,9 @@ export default async function TonlPage({ params }: { params: Promise<{ lang: str
             {dict.examples.map((example: any) => (
               <article
                 key={example.id}
-                className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm"
+                className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl overflow-hidden"
               >
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <div className="px-6 py-4 border-b border-slate-100 flex items-center gap-3">
                   <Code2 className="h-4 w-4 text-brand-600 shrink-0" />
                   <span className="font-semibold text-slate-800 text-sm">{example.label}</span>
@@ -184,7 +189,8 @@ export default async function TonlPage({ params }: { params: Promise<{ lang: str
           </div>
 
           {/* WHY TONL REDUCES TOKENS */}
-          <div className="mt-10 bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
+          <div className="mt-10 relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
             <h2 className="text-2xl font-bold text-slate-900 mb-4">{dict.whyTitle}</h2>
             <ul className="space-y-3">
               {dict.whyItems.map((item: string, i: number) => (
