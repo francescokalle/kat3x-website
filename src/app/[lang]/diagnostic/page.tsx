@@ -598,8 +598,21 @@ export default function DiagnosticPage() {
   const isInputValid = inputUrl.length === 0 || isValidUrl(inputUrl);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 flex flex-col">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0 flex flex-col">
       
+      {/* --- BACKGROUND GLOBALE (DOT PATTERN + ORBS) --- */}
+      <div className="fixed inset-0 pointer-events-none -z-20"
+           style={{
+             backgroundImage: 'radial-gradient(circle, #cbd5e1 1px, transparent 1px)',
+             backgroundSize: '32px 32px',
+             opacity: 0.4
+           }}
+      />
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-brand-300/30 rounded-full mix-blend-multiply filter blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute top-[40%] left-[-15%] w-[500px] h-[500px] bg-emerald-300/20 rounded-full mix-blend-multiply filter blur-[120px] animate-pulse" style={{ animationDuration: '12s' }} />
+      </div>
+
       <Navbar lang={langParam} />
 
       <main className="flex-grow pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
@@ -624,7 +637,8 @@ export default function DiagnosticPage() {
 
         {/* Area di Input */}
         <section className="max-w-3xl mx-auto mb-16">
-          <div className="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm">
+          <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 rounded-2xl overflow-hidden">
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
             <p className="text-sm text-slate-600 mb-6 text-center">
               {t.instruction}
             </p>
@@ -636,7 +650,7 @@ export default function DiagnosticPage() {
                   placeholder={t.inputPlaceholder}
                   value={inputUrl}
                   onChange={(e) => setInputUrl(e.target.value)}
-                  className={`flex-1 bg-slate-50 border ${!isInputValid ? 'border-red-400 focus:ring-red-500' : 'border-slate-300 focus:ring-brand-500 focus:border-brand-500'} rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 transition-all placeholder:text-slate-400`}
+                  className={`flex-1 bg-white/50 backdrop-blur-md border ${!isInputValid ? 'border-red-400 focus:ring-red-500' : 'border-slate-300 focus:ring-brand-500 focus:border-brand-500'} rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 transition-all placeholder:text-slate-400`}
                   onKeyDown={(e) => e.key === "Enter" && isValidUrl(inputUrl) && runDiagnostic()}
                 />
                 <button
@@ -666,7 +680,8 @@ export default function DiagnosticPage() {
               <p className="text-red-600 text-sm">{error}</p>
             </div>
 
-            <div className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+            <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-6 md:p-8 overflow-hidden">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
               <div className="mb-8 border-b border-slate-100 pb-6 text-center">
                 <h2 className="text-xl font-bold text-slate-900 mb-2">{t.verifyTitle}</h2>
                 <p className="text-slate-600 text-sm">
@@ -736,14 +751,15 @@ export default function DiagnosticPage() {
             
             {/* Epistemic Declaration */}
             {result.epistemic_declaration && (
-              <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-6 overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <h3 className="text-lg font-bold text-slate-900 mb-4">1. Epistemic Declaration</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                  <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                  <div className="bg-white/40 backdrop-blur-md p-4 rounded-lg border border-white/60">
                     <span className="text-slate-500 text-xs font-semibold uppercase tracking-wider block mb-1">Mode</span>
                     <span className="font-mono text-sm text-brand-600 font-bold">{result.epistemic_declaration.mode}</span>
                   </div>
-                  <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                  <div className="bg-white/40 backdrop-blur-md p-4 rounded-lg border border-white/60">
                     <span className="text-slate-500 text-xs font-semibold uppercase tracking-wider block mb-1">Confidence</span>
                     <span className={`font-mono text-sm font-bold ${result.epistemic_declaration.confidence === 'HIGH' ? 'text-emerald-600' : result.epistemic_declaration.confidence === 'MEDIUM' ? 'text-amber-500' : 'text-red-600'}`}>
                       {result.epistemic_declaration.confidence}
@@ -856,7 +872,8 @@ export default function DiagnosticPage() {
 
             {/* Next Actions */}
             {result.next_actions && result.next_actions.length > 0 && (
-              <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
+              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <h3 className="text-lg font-bold text-slate-900 mb-6">5. Next Actions</h3>
                 <ul className="space-y-3 text-slate-700 list-disc pl-5">
                   {result.next_actions.map((action, i) => (

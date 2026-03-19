@@ -44,7 +44,20 @@ export default async function ProblemPage({ params }: { params: Promise<{ lang: 
   const dict = dictionaries[lang] || dictionaries.it;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
+
+      {/* --- BACKGROUND GLOBALE (DOT PATTERN + ORBS) --- */}
+      <div className="fixed inset-0 pointer-events-none -z-20"
+           style={{
+             backgroundImage: 'radial-gradient(circle, #cbd5e1 1px, transparent 1px)',
+             backgroundSize: '32px 32px',
+             opacity: 0.4
+           }}
+      />
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-brand-300/30 rounded-full mix-blend-multiply filter blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute top-[40%] left-[-15%] w-[500px] h-[500px] bg-emerald-300/20 rounded-full mix-blend-multiply filter blur-[120px] animate-pulse" style={{ animationDuration: '12s' }} />
+      </div>
 
     <Navbar lang={lang}/>
       <main className="pb-20">
@@ -71,10 +84,11 @@ export default async function ProblemPage({ params }: { params: Promise<{ lang: 
         </section>
 
         {/* CARDS SECTION (Stesso stile Identity / Pillars della Home) */}
-        <section className="py-16 bg-white border-y border-slate-200">
+        <section className="py-16 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
+              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <div className="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mb-6">
                   <SearchX className="h-6 w-6" />
                 </div>
@@ -84,7 +98,8 @@ export default async function ProblemPage({ params }: { params: Promise<{ lang: 
                 </p>
               </div>
               
-              <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
+              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-6">
                   <ServerCrash className="h-6 w-6" />
                 </div>
@@ -94,7 +109,8 @@ export default async function ProblemPage({ params }: { params: Promise<{ lang: 
                 </p>
               </div>
               
-              <div className="bg-slate-50 p-8 rounded-xl border border-slate-100">
+              <div className="relative bg-white/50 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-xl p-8 overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
                 <div className="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mb-6">
                   <Bot className="h-6 w-6" />
                 </div>
