@@ -38,7 +38,7 @@ const dictionaries: Record<string, any> = {
       subtitle: "Knowledge Seeding: Esperimenti di assimilazione semantica recenti.",
       viewAll: "Vedi tutti i report",
       comingSoon: "In Arrivo",
-      processing: "Dati in elaborazione..."
+      processing: "In elaborazione..."
     },
     ctaSection: {
       title: "Misura la tua AI Citability",
@@ -76,7 +76,7 @@ const dictionaries: Record<string, any> = {
       subtitle: "Knowledge Seeding: Recent semantic assimilation experiments.",
       viewAll: "View all reports",
       comingSoon: "Coming Soon",
-      processing: "Data processing..."
+      processing: "Processing..."
     },
     ctaSection: {
       title: "Measure your AI Citability",
@@ -201,7 +201,7 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
           <div className="grid md:grid-cols-3 gap-6 lg:gap-10 items-start">
             
             {/* PILLAR 1 */}
-            <article className="relative bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 lg:p-10 rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+            <article className="relative bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 lg:p-10 rounded-3xl overflow-hidden group transition-[transform] duration-500 hover:[transform:translateY(-8px)]">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
               <div className="w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-50 border border-brand-200 text-brand-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
                 <Share2 className="h-6 w-6" />
@@ -210,8 +210,8 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
               <p className="text-slate-600 leading-relaxed">{dict.pillars.p1Desc}</p>
             </article>
 
-            {/* PILLAR 2 - Sfalsato verso il basso su Desktop */}
-            <article className="relative bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 lg:p-10 rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-500 md:translate-y-12">
+            {/* PILLAR 2 */}
+            <article className="relative bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 lg:p-10 rounded-3xl overflow-hidden group transition-[transform] duration-500 md:[transform:translateY(3rem)] md:hover:[transform:translateY(calc(3rem_-_8px))]">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
               <div className="w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-50 border border-brand-200 text-brand-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
                 <ScanEye className="h-6 w-6" />
@@ -221,7 +221,7 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
             </article>
 
             {/* PILLAR 3 */}
-            <article className="relative bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 lg:p-10 rounded-3xl overflow-hidden group hover:-translate-y-2 transition-transform duration-500 md:translate-y-24 lg:translate-y-24">
+            <article className="relative bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 lg:p-10 rounded-3xl overflow-hidden group transition-[transform] duration-500 md:[transform:translateY(6rem)] lg:[transform:translateY(6rem)] md:hover:[transform:translateY(calc(6rem_-_8px))] lg:hover:[transform:translateY(calc(6rem_-_8px))]">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
               <div className="w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-50 border border-brand-200 text-brand-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm">
                 <Quote className="h-6 w-6" />
@@ -280,7 +280,7 @@ export default async function Kat3xHome({ params }: { params: Promise<{ lang: st
                       ))}
                     </div>
                   ) : (
-                    <div className="mt-auto px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center gap-3">
+                    <div className="mt-auto w-fit px-4 py-3 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
                       <span className="text-sm text-slate-400 font-medium">{dict.experiments.processing}</span>
                     </div>

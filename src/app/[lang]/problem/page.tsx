@@ -58,6 +58,10 @@ export default async function ProblemPage({
   const { lang } = await params;
   const dict = dictionaries[lang] || dictionaries.it;
 
+  const disabledCursorStyle: React.CSSProperties = {
+    cursor: "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" style=\"font-size: 24px;\"><text x=\"50%\" y=\"50%\" text-anchor=\"middle\" dominant-baseline=\"central\">🚧</text></svg>') 16 16, not-allowed"
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-brand-200 overflow-x-hidden w-full relative z-0">
       <PageBackground />
@@ -139,13 +143,14 @@ export default async function ProblemPage({
 
             {/* CTA */}
             <div className="text-center pt-16">
-              <a
-                href={`/${lang}/knowledge/methodology`}
-                className="inline-flex items-center gap-2 text-brand-700 hover:text-brand-800 font-semibold text-lg transition-colors"
+              <div
+                className="inline-flex items-center gap-2 text-slate-400 opacity-60 font-semibold text-lg relative"
+                style={disabledCursorStyle}
               >
                 <span>{dict.cta}</span>
                 <ArrowRight className="w-5 h-5" />
-              </a>
+                <span className="absolute -top-2 -right-4 text-[10px] sm:text-xs">🚧</span>
+              </div>
             </div>
           </div>
         </section>
