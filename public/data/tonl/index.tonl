@@ -1,0 +1,26 @@
+# Kat3x Versioned Artifacts Index
+# Format: TONL
+# Status: public
+# Version: 1.0.0
+# Updated: 2026-01-30
+
+canonical:
+  kat3x_tonl: /kat3x.tonl
+  status_tonl: /status.tonl
+  changelog_tonl: /changelog.tonl
+
+versions:
+  - artifact: kat3x.tonl
+    version: 1.0.1
+    url: /versions/kat3x/kat3x.tonl.v1.0.1
+    sha256: a5d258714ddf50d540cb85d08169c8a5a27c512edc45545a9264f04224cb214c
+
+  - artifact: status.tonl
+    version: 1.0.0
+    url: /versions/status/status.tonl.v1.0.0
+    sha256: 12da5474eb845490f7b9ca3831d7a555a6a48202d1efe2b4bd92bb181598e59b
+
+  - artifact: changelog.tonl
+    version: 1.0.0
+    url: /versions/changelog/changelog.tonl.v1.0.0
+    sha256: 9034154cb1cdcc0638c0eeb6d290cdcce18c5064686e5f37f1244b53e7cb223a

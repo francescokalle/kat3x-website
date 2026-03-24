@@ -79,7 +79,7 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
                 <CatLogo 
                   viewBox="0 0 236 236" 
                   fill="currentColor"
-                  className="h-10 w-10 text-brand-600 group-hover:scale-110 transition-transform flex-shrink-0" 
+                  className="h-10 w-10 text-black-600 group-hover:scale-110 transition-transform flex-shrink-0" 
                 />
                 <div className="flex flex-col sm:flex-row sm:items-center min-w-0">
                   <span className="font-bold text-xl tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors truncate">
