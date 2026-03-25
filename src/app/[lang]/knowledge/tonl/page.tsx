@@ -4,6 +4,12 @@ import GlowTitle from "@/app/components/GlowTitle";
 import Navbar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
 import PageBackground from "@/app/components/PageBackground";
+import { getPageMetadata } from "@/config/metadata-per-page";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return getPageMetadata("tonl", lang);
+}
 
 // --- TRANSLATION DICTIONARIES ---
 const dictionaries: Record<string, any> = {

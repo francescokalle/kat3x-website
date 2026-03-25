@@ -5,6 +5,12 @@ import Navbar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
 import PageBackground from "../../components/PageBackground";
 import Blockquote from "@/app/components/blockquote";
+import { getPageMetadata } from "@/config/metadata-per-page";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return getPageMetadata("problem", lang);
+}
 
 const dictionaries: Record<string, any> = {
   it: {

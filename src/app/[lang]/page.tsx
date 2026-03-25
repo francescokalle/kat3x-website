@@ -6,6 +6,12 @@ import Footer from '../components/Footer';
 
 import reportsData from '@res/data/reports/reports-data.json';
 import BlockQuote from '../components/blockquote';
+import { getPageMetadata } from "@/config/metadata-per-page";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return getPageMetadata("home", lang);
+}
 
 const dictionaries: Record<string, any> = {
   it: {
