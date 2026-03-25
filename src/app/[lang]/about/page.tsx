@@ -13,6 +13,12 @@ import GlowTitle from '../../components/GlowTitle';
 import Navbar from '@/app/components/NavBar';
 import Footer from '@/app/components/Footer';
 import PageBackground from '../../components/PageBackground';
+import { getPageMetadata } from "@/config/metadata-per-page";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return getPageMetadata("about", lang);
+}
 
 const dictionaries: Record<string, any> = {
   it: {
