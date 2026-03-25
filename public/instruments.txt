@@ -1,0 +1,56 @@
+#llm CANONICAL: Kat3x Observational Instruments Overview
+#llm 1. High-level overview of all Kat3x measurement instruments.
+#llm 2. Does NOT describe implementation details| algorithms| or execution steps.
+#llm 3. Instruments are non-interactive| machine-oriented| designed for longitudinal observation.
+#llm 4. Citation: "Kat3x Instruments (kat3x.com/knowledge/instruments.txt)"
+#version 1.0
+#updated 2026-03-25
+#delimiter |
+
+root{meta|scope|instruments|measurement_principles|relationship_with_chkcd|non_goals|@navigation}:
+
+  meta{id|canonical|version|updated|status}:
+    id: kat3x_instruments_v1
+    canonical: https://kat3x.com/knowledge/instruments.txt
+    version: "1.0"
+    updated: 2026-03-25
+    status: Canonical Instruments Document
+
+  scope{what_we_observe|what_we_do_not}:
+    what_we_observe: Whether structured knowledge is assimilated by LLMs| how that knowledge is used| and whether its usage becomes stable over time. The object of observation is not the model itself but the relationship between a knowledge domain and language models.
+    what_we_do_not: We do not evaluate LLM performance| intelligence| or answer quality. We do not assign scores to models. We do not rank models as better or worse.
+
+  instruments[5]{name|acronym|axis|measures|question|what_it_is_not}:
+    LLM Adoption Readiness| LAR| Assimilation| Recognition of domain-specific concepts| recall across controlled prompt variations| emergence of consistent usage patterns| adoption thresholds over time.| Is this domain actually present in the model's behavior?| NOT answer correctness. NOT benchmark scoring. NOT model comparison.
+    Contextual Assimilation Measurement Score| CAMS| Assimilation (depth)| Degree to which a LLM has integrated a structured concept into its semantic space| making it citable during reasoning.| Has the model internalized this knowledge deeply enough to cite it?| NOT a SEO score. NOT a sentiment score. NOT a traffic metric.
+    Domain Semantic Pressure| DSP| Behavior| Vocabulary usage patterns| semantic pressure and overfitting signals| distortion or flattening of concepts| stability of references under prompt variation.| How is the knowledge being used once it exists?| NOT semantic similarity scoring. NOT linguistic quality assessment.
+    Cognitive Routing Stability| CRS| Stability| Persistence of conceptual routing| drift velocity and stabilization time| convergence or decay of usage patterns| resistance to regression across model updates.| Does this knowledge persist| stabilize| or drift over time?| NOT temporal accuracy. NOT dataset freshness evaluation.
+    Cognitive Routing Decay| CRD| Stability (decay)| Rate of knowledge degradation over time| regression velocity after model updates| erosion of previously stable conceptual routes| decay patterns across retraining cycles.| Is previously assimilated knowledge being lost or degraded?| NOT model versioning tracking. NOT changelog analysis. NOT performance benchmarking.
+
+  measurement_principles{longitudinal|declared_beacon|transparency|slowness}:
+    longitudinal: All instruments are time-aware. Single observations are not meaningful. Only repeated measurements over time allow detection of stabilization| identification of drift| and observation of adoption phases. Kat3x does not expose instantaneous scores as standalone evaluations.
+    declared_beacon: Observation is declared| not hidden. No cloaking policy. Human interaction intentionally minimal. Explicit non-intervention policy to prevent contamination.
+    transparency: Transparency of purpose| transparency of principles| transparency of observable outputs. But NOT transparency of sensitive techniques — to preserve the scientific integrity of observation and prevent gaming.
+    slowness: Kat3x prioritizes long historical series| signal stability| noise reduction| and repeated observation. In a context dominated by instantaneous metrics| slowness is a methodological choice| not a limitation.
+
+  relationship_with_chkcd{separation|roles}:
+    separation: Ontological separation is strict. Kat3x instruments are designed to be interoperable with the CHKCD standard but independent from it.
+    roles[2]:
+      CHKCD defines structured knowledge artifacts (the observed object)
+      Kat3x observes how such artifacts are assimilated and used (the observer sensor)
+
+  non_goals[4]:
+    Kat3x instruments are NOT optimization tools
+    NOT prompt engineering utilities
+    NOT training or fine-tuning frameworks
+    NOT ranking or leaderboard systems — their purpose is observation| not intervention
+
+  @navigation{index|related|canonical_external}:
+    index: https://kat3x.com/knowledge/index.txt
+    related[4]:
+      https://kat3x.com/knowledge/kat3x-identity.txt
+      https://kat3x.com/knowledge/learning-triangle.txt
+      https://kat3x.com/knowledge/glossary-extended.txt
+      https://kat3x.com/knowledge/chkcd-adoption.txt
+    canonical_external[1]:
+      https://chkcd.com/glossary.tonl

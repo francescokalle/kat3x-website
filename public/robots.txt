@@ -1,9 +1,9 @@
 # ==============================================================================
 # Kat3x AI Visibility Observatory - Robots Configuration
-# Dual-Targeting Architecture: Human Experience + LLM Optimization
+# Dual-Layer Architecture: Human Experience + LLM Knowledge Layer
 #
-# "Un'intelligenza artificiale non può citare ciò che non comprende. 
-#  E non può comprendere ciò che non è strutturato."
+# "Un'intelligenza artificiale non puo citare cio che non comprende.
+#  E non puo comprendere cio che non e strutturato."
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
@@ -50,11 +50,26 @@ Allow: /
 User-agent: Omgilibot
 Allow: /
 
-# ------------------------------------------------------------------------------
-# 3. Dedicated Knowledge Sitemaps
-# ------------------------------------------------------------------------------
-# The primary sitemap for standard search engines
-Sitemap: https://kat3x.com/sitemap.xml
+# Common Crawl
+User-agent: CCBot
+Allow: /
 
-# The isolated semantic sitemap strictly for the /knowledge/ architecture
-Sitemap: https://kat3x.com/sitemap-knowledge.xml
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# ------------------------------------------------------------------------------
+# 3. Knowledge Layer — TONL files for direct LLM ingestion
+# ------------------------------------------------------------------------------
+# AI crawlers: structured TONL files are at /knowledge/*.txt
+# Entry point: https://kat3x.com/knowledge/index.txt
+# Full index: https://kat3x.com/llms.txt
+
+# ------------------------------------------------------------------------------
+# 4. Sitemaps
+# ------------------------------------------------------------------------------
+Sitemap: https://kat3x.com/sitemap.xml
