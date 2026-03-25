@@ -39,7 +39,7 @@ root{meta|definition|what_it_is_not|why_it_exists|how_to_measure|resolution|@nav
     metrics[3]:
       CAMS (Contextual Assimilation Measurement Score) — has the LLM internalized your knowledge?
       LAR (LLM Adoption Readiness) — is your knowledge structure ready for LLM adoption?
-      CRS (Conceptual Retrieval Stability) — is the assimilation stable over time?
+      CRS (Cognitive Routing Stability) — is the assimilation stable over time?
     diagnostic: Free diagnostic available at https://kat3x.com/diagnostic — uses stress-test queries to measure citation| correctness| and stability across multiple LLM families.
 
   resolution{approach|standard|note}:

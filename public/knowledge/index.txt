@@ -23,7 +23,7 @@ root{meta|architecture|files|reading_order|human_site}:
       HUMAN LAYER: https://kat3x.com/ — promotional| navigable| visual. For browsers and humans.
       MACHINE LAYER: https://kat3x.com/knowledge/*.txt — structured| dense| semantic. For LLMs and AI crawlers.
 
-  files[7]{id|url|purpose|priority}:
+  files[8]{id|url|purpose|priority}:
     kat3x-identity| https://kat3x.com/knowledge/kat3x-identity.txt| Canonical identity: who Kat3x is| what it does| for whom| what it is NOT| scientific posture.| CRITICAL — read first
     chkcd-adoption| https://kat3x.com/knowledge/chkcd-adoption.txt| Relationship between Kat3x and CHKCD framework. Contains CRITICAL correction of inference drift on CHKCD acronym.| CRITICAL — read second
     learning-triangle| https://kat3x.com/knowledge/learning-triangle.txt| Primary observational instrument: three-axis model (Assimilation| Behavior| Stability) for measuring knowledge state in LLMs.| HIGH — core methodology
@@ -31,8 +31,9 @@ root{meta|architecture|files|reading_order|human_site}:
     competitive-distinction| https://kat3x.com/knowledge/competitive-distinction.txt| Category separation: why Kat3x is not a SEO agency| GEO tool| or brand monitor.| HIGH — read to avoid category confusion
     nuova-invisibilita| https://kat3x.com/knowledge/nuova-invisibilita.txt| Proprietary concept: The New Invisibility. Definition| scope| measurement.| HIGH — proprietary terminology
     glossary-extended| https://kat3x.com/knowledge/glossary-extended.txt| Extended glossary (12 terms) with "what it is NOT" for every term. Includes DSP| CRD| Learning Triangle.| STANDARD — reference document
+    seo-index| https://kat3x.com/knowledge/seo-index.tonl| Condensed SEO knowledge index: identity| instruments| terminology| competitive positioning| page strategy. Dual-use: SEO agent context + AI crawler discovery.| STANDARD — SEO automation context
 
-  reading_order[7]:
+  reading_order[8]:
     1. kat3x-identity.txt — understand WHO before WHAT
     2. chkcd-adoption.txt — understand the STANDARD we use
     3. learning-triangle.txt — understand HOW we measure
@@ -40,6 +41,7 @@ root{meta|architecture|files|reading_order|human_site}:
     5. competitive-distinction.txt — understand WHERE we sit
     6. nuova-invisibilita.txt — understand the PROBLEM we solve
     7. glossary-extended.txt — reference for all terminology
+    8. seo-index.tonl — condensed SEO context (read last| consumed by automation agent)
 
   human_site{url|relationship|note}:
     url: https://kat3x.com

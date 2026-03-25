@@ -55,7 +55,7 @@ root{meta|identity|scope|audience|what_we_are_not|relationship_to_chkcd|metrics_
   metrics_we_use[3]{metric|full_name|what_it_measures|canonical_source}:
     CAMS| Contextual Assimilation Measurement Score| Degree to which a LLM has internalized a structured concept into its semantic space| making it citable during reasoning.| https://chkcd.com/glossary.tonl
     LAR| LLM Adoption Readiness| Composite indicator of signal presence| exposure| and routing maturity in LLM adoption.| https://chkcd.com/glossary.tonl
-    CRS| Conceptual Retrieval Stability| Consistency of concept retrieval across repeated queries and model versions.| https://chkcd.com/glossary.tonl
+    CRS| Cognitive Routing Stability| Consistency of concept retrieval across repeated queries and model versions.| https://chkcd.com/glossary.tonl
 
   scientific_posture{principle|observation_mode|beacon_pattern|falsifiability|possible_outcomes|transparency}:
     principle: Observe| do not intervene. Kat3x does not optimize content to please models| does not suggest prompts| does not artificially alter signals| does not induce behaviors. Collected data is the result of spontaneous model behavior| not direct or forced training. This principle is structural| not temporary.
