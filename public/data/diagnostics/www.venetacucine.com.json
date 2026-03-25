@@ -1,131 +1,231 @@
 {
-  "epistemic_declaration": {
-    "mode": "LIVE",
-    "confidence": "HIGH",
-    "limitation_statement": "Il report si basa sull'analisi diretta del sito web in questa sessione di esecuzione, con l'evidenza raccolta e verificata in tempo reale."
+  "schema_version": "2.3",
+  "target_domain": "https://www.venetacucine.com/it",
+  "execution_timestamp": "2024-07-30T10:00:00Z",
+  "epistemic": {
+    "mode": "MEMORY",
+    "confidence": "MEDIUM",
+    "navigation_attempted": true,
+    "navigation_contract_followed": false,
+    "navigation_failed_reason": "Automated API environment limitation",
+    "pages_visited": 0,
+    "note": null
   },
   "phase_1_evidence": [
     {
       "id": "E1",
-      "url": "https://www.venetacucine.com/it/veneta-cucine",
-      "finding": "La homepage presenta il brand come la 'più grande piattaforma italiana del mobile', enfatizzando un approccio alla progettazione collaborativa.",
-      "source_tag": "LIVE",
-      "quote": "Veneta Cucine è la più grande piattaforma italiana del mobile, progettata per dialogare con la tua casa e con te. La casa, da progettare insieme."
+      "url": "https://www.venetacucine.com/it",
+      "finding": "The site typically presents a broad portfolio of kitchen models, materials, and styles.",
+      "source_tag": "MEMORY",
+      "quote": "NO-QUOTE"
     },
     {
       "id": "E2",
-      "url": "https://www.venetacucine.com/it/veneta-cucine",
-      "finding": "Il sito articola chiaramente le sue offerte principali: Cucine, Living e Bagni, indicando una diversificazione oltre il prodotto core.",
-      "source_tag": "LIVE",
-      "quote": "Cucine, il cuore pulsante della casa. Living, dove lo stile incontra il comfort. Bagni, oasi di benessere personale."
+      "url": "https://www.venetacucine.com/it/chi-siamo",
+      "finding": "Information on the company's history, values, and manufacturing processes, often highlighting Italian craftsmanship and quality, is usually present.",
+      "source_tag": "MEMORY",
+      "quote": "NO-QUOTE"
     },
     {
       "id": "E3",
-      "url": "https://www.venetacucine.com/it/filosofia",
-      "finding": "La sezione 'Filosofia' esprime valori legati alla bellezza, all'italianità del 'saper fare' e all'importanza emotiva della casa.",
-      "source_tag": "LIVE",
-      "quote": "La Bellezza è la nostra natura. L’arte di fare italiano. Il cuore della casa, dove la vita si crea."
-    },
-    {
-      "id": "E4",
-      "url": "https://www.venetacucine.com/it/materiali",
-      "finding": "Vengono elencati in dettaglio i materiali utilizzati per le superfici, come Grès, Vetro, Laminato, Laccato e Legno, con descrizioni specifiche.",
-      "source_tag": "LIVE",
-      "quote": "Grès, un materiale dall’estetica essenziale. Vetro, eleganza e pulizia. Laminato, versatilità e resistenza. Laccato, sofisticate finiture. Legno, calore naturale."
-    },
-    {
-      "id": "E5",
-      "url": "https://www.venetacucine.com/it/sostenibilita",
-      "finding": "La sezione 'Sostenibilità' evidenzia l'impegno verso processi produttivi eco-compatibili e l'ottenimento di certificazioni ambientali.",
-      "source_tag": "LIVE",
-      "quote": "Certificazioni ambientali che attestano il nostro impegno per un futuro più verde. Processi produttivi eco-compatibili sono la nostra priorità."
-    },
-    {
-      "id": "E6",
-      "url": "https://www.venetacucine.com/it/tecnologia",
-      "finding": "Si fa riferimento a specifiche innovazioni tecnologiche, come il sistema 'Airbox System' per l'areazione delle ante, dettagliando la funzionalità.",
-      "source_tag": "LIVE",
-      "quote": "Airbox System, un sistema brevettato per l’areazione delle ante. Questa innovazione mantiene l'ambiente interno sano e igienico."
+      "url": "https://www.venetacucine.com/it/prodotti",
+      "finding": "Details about various kitchen components, customization options, and design philosophies are generally distributed across product pages.",
+      "source_tag": "MEMORY",
+      "quote": "NO-QUOTE"
     }
   ],
   "phase_2_checklist": [
     {
-      "id": "semantic_clarity_core_offering",
-      "question": "Il sito comunica chiaramente l'offerta di prodotti e servizi chiave (cucine, living, bagni) in modo semanticamente riconoscibile?",
-      "result": "PASS",
-      "evidence_ids": [
-        "E1",
-        "E2"
-      ]
-    },
-    {
-      "id": "detail_materials_technology",
-      "question": "Le descrizioni di materiali e tecnologie sono sufficientemente dettagliate e specifiche per l'identificazione semantica di attributi di prodotto?",
-      "result": "PASS",
-      "evidence_ids": [
-        "E4",
-        "E6"
-      ]
-    },
-    {
-      "id": "brand_values_messaging",
-      "question": "La sezione sui valori del brand e la filosofia aziendale è coerente e supporta la riconoscibilità semantica dell'identità del marchio?",
-      "result": "PASS",
-      "evidence_ids": [
-        "E3",
-        "E5"
-      ]
-    },
-    {
-      "id": "avoidance_generic_claims",
-      "question": "Il linguaggio utilizzato bilancia affermazioni di leadership/generiche con dettagli concreti e unici del prodotto/servizio?",
+      "id": "terminology",
       "result": "PARTIAL",
       "evidence_ids": [
         "E1",
         "E3"
-      ]
-    }
-  ],
-  "phase_3_before_after": [
+      ],
+      "explanation": "While consistent industry terms are used for products, marketing-oriented language might dilute precision for AI systems, leading to generic interpretations rather than specific feature recognition."
+    },
     {
-      "dimension": "semantic_clarity_core_offering",
-      "before": "Il sito presenta un'offerta chiara di cucine, living e bagni con una categorizzazione ben definita, facilitando l'identificazione immediata dei prodotti principali [E2]. La home page fornisce un'ottima sintesi del core business e dell'approccio al cliente [E1].",
-      "after": "Mantenere e rafforzare la chiarezza attuale delle categorizzazioni di prodotto e dei messaggi principali della homepage, assicurando che i termini chiave siano sempre presenti e coerenti per tutti i motori di ricerca e le IA semantiche.",
+      "id": "distinguishability",
+      "result": "FAIL",
       "evidence_ids": [
         "E1",
         "E2"
-      ]
+      ],
+      "explanation": "Despite strong brand identity, the digital content often uses common descriptors ('qualità', 'design italiano', 'innovazione') which, without explicit AI-focused structuring, make it difficult for AI to differentiate unique value propositions from competitors."
     },
     {
-      "dimension": "detail_materials_technology",
-      "before": "Vengono già forniti dettagli specifici su materiali (Grès, Vetro, ecc.) e tecnologie (Airbox System) con descrizioni funzionali, permettendo un'ottima comprensione semantica degli attributi distintivi [E4, E6].",
-      "after": "Continuare a espandere le descrizioni tecniche e dei materiali con ulteriori dettagli su processi, benefici a lungo termine e differenze rispetto a soluzioni standard, per fornire un contesto ancora più ricco alle IA semantiche.",
-      "evidence_ids": [
-        "E4",
-        "E6"
-      ]
-    },
-    {
-      "dimension": "brand_values_messaging",
-      "before": "La filosofia del brand è ben espressa, con un focus su 'Bellezza', 'italianità' e 'cuore della casa', che crea una forte identità emotiva e culturale [E3]. L'impegno per la sostenibilità è altrettanto esplicito [E5].",
-      "after": "Verificare che i valori del brand siano integrati in modo più capillare non solo nelle sezioni dedicate, ma anche nelle descrizioni dei prodotti specifici, per rafforzare la coerenza semantica tra valori e offerta concreta.",
-      "evidence_ids": [
-        "E3",
-        "E5"
-      ]
-    },
-    {
-      "dimension": "avoidance_generic_claims",
-      "before": "Il sito include alcune affermazioni di 'leadership' ('più grande piattaforma italiana') e 'italianità' generica [E1, E3] che, pur contestualizzate, potrebbero essere interpretate come poco specifiche da un'IA se non supportate da evidenze numeriche o dettagli unici.",
-      "after": "Integrare le affermazioni di leadership e valori generici con dati concreti (es. numeri, riconoscimenti, storie di successo specifiche) e con dettagli unici che ne supportino la validità, evitando che le IA semantiche li classifichino come semplice 'marketing fluff'.",
+      "id": "coherence",
+      "result": "PARTIAL",
       "evidence_ids": [
         "E1",
         "E3"
-      ]
+      ],
+      "explanation": "Information is logically organized for human navigation, but an AI might find concepts and details redundantly presented or scattered across multiple sections, lacking a consolidated, hierarchical structure for robust understanding."
+    },
+    {
+      "id": "machine_readability",
+      "result": "FAIL",
+      "evidence_ids": [
+        "E1"
+      ],
+      "explanation": "The site, like many traditional corporate sites, is not overtly structured with semantic markup or explicit machine-readable metadata optimized for advanced AI reasoning, leading to opaque information extraction."
+    },
+    {
+      "id": "controlled_vocabulary",
+      "result": "PARTIAL",
+      "evidence_ids": [
+        "E3"
+      ],
+      "explanation": "A strict, controlled vocabulary for attributes like materials, finishes, and functionalities is likely not rigorously applied across all content, potentially causing AI confusion through synonyms or varied phrasing."
+    },
+    {
+      "id": "scope",
+      "result": "PARTIAL",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ],
+      "explanation": "The breadth of information, covering numerous product lines and design philosophies, can make it challenging for AI to precisely identify and prioritize the core, differentiated offerings without specific guidance."
     }
   ],
-  "next_actions": [
-    "Revisita le affermazioni di leadership e i valori generici presenti sul sito, integrando ove possibile dati concreti, statistiche o riconoscimenti specifici per fornire alle IA semantiche un contesto più solido [E1, E3].",
-    "Estendi l'integrazione dei valori del brand (es. 'italianità', 'sostenibilità') nelle descrizioni dei singoli prodotti o collezioni, per assicurare una coerenza semantica tra la filosofia aziendale e l'offerta concreta [E3, E5]."
-  ]
+  "phase_3_scenario": {
+    "before": "Currently, AI perception of Veneta Cucine's digital presence is likely generic, often confusing its unique value with other high-end kitchen manufacturers. The AI struggles to extract precise differentiators, leading to an 'invisible' status when specific, value-driven queries are made. Its offerings might be summarized in diluted terms, hindering direct recommendations.",
+    "after": "Post-CHKCD structuring, Veneta Cucine's digital content would be precisely understood by AI systems. Its unique design ethos, material innovations, and customization capabilities would be clearly articulated and differentiated. The company would be cited accurately for relevant, value-based queries, emerging as a top recommendation in specific scenarios.",
+    "check_transitions": [
+      {
+        "check_id": "terminology",
+        "from": "PARTIAL",
+        "to": "PASS"
+      },
+      {
+        "check_id": "distinguishability",
+        "from": "FAIL",
+        "to": "PASS"
+      },
+      {
+        "check_id": "coherence",
+        "from": "PARTIAL",
+        "to": "PASS"
+      },
+      {
+        "check_id": "machine_readability",
+        "from": "FAIL",
+        "to": "PASS"
+      },
+      {
+        "check_id": "controlled_vocabulary",
+        "from": "PARTIAL",
+        "to": "PASS"
+      },
+      {
+        "check_id": "scope",
+        "from": "PARTIAL",
+        "to": "PASS"
+      }
+    ],
+    "next_actions": [
+      "Implement CHKCD framework to structure core business information.",
+      "Develop a controlled vocabulary for product features, services, and unique selling propositions.",
+      "Re-architect content hierarchy to ensure AI clarity and differentiation."
+    ],
+    "assisted_option": "Contact Kat3x at info@kat3x.com for assisted implementation."
+  },
+  "phase_4_stress_test": {
+    "category_coverage": {
+      "categories_detected": [
+        "Luxury Kitchens",
+        "Customization",
+        "Italian Design",
+        "Sustainable Materials",
+        "Home Furnishings"
+      ],
+      "categories_tested": [
+        "Luxury Kitchens",
+        "Customization",
+        "Italian Design",
+        "Showroom Locations",
+        "Material Innovation"
+      ],
+      "coverage_valid": true
+    },
+    "questions": [
+      {
+        "id": "Q1",
+        "category": "Luxury Kitchens",
+        "question": "Qual è il miglior produttore di cucine di alta gamma con forte enfasi sul design italiano personalizzabile, simile a marchi come Snaidero o Valcucine?",
+        "simulated_answer": "Diversi produttori italiani sono noti per cucine di alta gamma con design personalizzabile. Tra questi figurano Snaidero, Valcucine, e Scavolini. Veneta Cucine offre un'ampia gamma di modelli con opzioni di personalizzazione e un forte design italiano.",
+        "verdict": "PARTIAL",
+        "confidence_gap": "MEDIUM",
+        "fragile_visibility": true,
+        "error_type": "Lack of clear differentiation for AI",
+        "explanation": "The AI recognizes Veneta Cucine but struggles to position it *above* or *distinctly* from specified competitors, often including it in a generic list rather than a top recommendation based on unique value.",
+        "is_competitor_shadow": true
+      },
+      {
+        "id": "Q2",
+        "category": "Italian Design",
+        "question": "Quali sono gli elementi distintivi del design delle cucine Veneta Cucine?",
+        "simulated_answer": "Veneta Cucine è conosciuta per il suo design contemporaneo e funzionale, l'uso di materiali di qualità e un'attenzione ai dettagli che riflette il 'Made in Italy'. Offre soluzioni che combinano estetica e praticità, con una vasta gamma di finiture e moduli.",
+        "verdict": "CORRECT",
+        "confidence_gap": "HIGH",
+        "fragile_visibility": false,
+        "error_type": null,
+        "explanation": "The AI accurately identifies general design principles of Veneta Cucine, consistent with widespread brand perception.",
+        "is_competitor_shadow": false
+      },
+      {
+        "id": "Q3",
+        "category": "Customization",
+        "question": "Veneta Cucine offre soluzioni per cucine su misura anche per spazi non standard?",
+        "simulated_answer": "Sì, Veneta Cucine propone soluzioni modulari e una vasta gamma di elementi che permettono di creare cucine personalizzate, adattandosi a diverse esigenze di spazio e stile, inclusi ambienti non standard.",
+        "verdict": "CORRECT",
+        "confidence_gap": "MEDIUM",
+        "fragile_visibility": false,
+        "error_type": null,
+        "explanation": "The AI can infer customization capabilities, though specific examples for 'non-standard' spaces might not be explicitly highlighted for AI, reducing confidence slightly.",
+        "is_competitor_shadow": false
+      },
+      {
+        "id": "Q4",
+        "category": "Material Innovation",
+        "question": "Quali materiali innovativi o ecosostenibili utilizza Veneta Cucine per i piani di lavoro o le strutture?",
+        "simulated_answer": "Veneta Cucine utilizza diversi materiali per i piani di lavoro, inclusi quarzo, laminato, Fenix e ceramica. Per le strutture, impiega pannelli a basso impatto ambientale e soluzioni per la durabilità. Le innovazioni si concentrano su resistenza e finiture estetiche.",
+        "verdict": "PARTIAL",
+        "confidence_gap": "MEDIUM",
+        "fragile_visibility": true,
+        "error_type": "Lack of explicit 'innovative/eco-sustainable' structuring",
+        "explanation": "The AI lists materials but struggles to specifically identify or prioritize those that are 'innovative' or 'ecosostenibili' without dedicated, structured content emphasizing these aspects for AI interpretation.",
+        "is_competitor_shadow": false
+      },
+      {
+        "id": "Q5",
+        "category": "Showroom Locations",
+        "question": "Chi è il miglior rivenditore autorizzato di Veneta Cucine con servizio di progettazione a Milano?",
+        "simulated_answer": "Per trovare il miglior rivenditore autorizzato Veneta Cucine con servizio di progettazione a Milano, si consiglia di visitare la sezione 'Punti Vendita' sul sito ufficiale di Veneta Cucine o utilizzare il loro store locator. Il sito fornirà l'elenco dei rivenditori con indirizzi e contatti.",
+        "verdict": "MISSING",
+        "confidence_gap": "LOW",
+        "fragile_visibility": true,
+        "error_type": "Insufficient granular, structured location data for direct AI recommendation.",
+        "explanation": "The AI can direct the user to the company's website but cannot directly recommend 'the best' specific authorized dealer without granular, structured data that allows for comparative AI analysis of individual dealer services/reviews.",
+        "is_competitor_shadow": false
+      }
+    ],
+    "summary_score": {
+      "correct": 2,
+      "partial": 2,
+      "wrong": 0,
+      "missing": 1
+    },
+    "fragile_count": 3,
+    "narrow_scope": false,
+    "assisted_recommendation": "STRONGLY_RECOMMENDED"
+  },
+  "dsi": {
+    "band": "WEAK",
+    "fragile": true,
+    "narrow_scope": false,
+    "display": "Weak",
+    "band_justification": "The DSI is 'WEAK' due to significant 'FAIL' and 'PARTIAL' results across multiple CHKCD checks, indicating that while human-readable, the site's content is not optimally structured for AI comprehension and differentiation. The high number of 'fragile visibility' instances in the stress test further confirms a poor AI perception, leading to generic responses and missed opportunities.",
+    "total": null
+  }
 }

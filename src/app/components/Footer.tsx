@@ -59,7 +59,7 @@ export default function Footer({ lang }: FooterProps) {
                 <CatLogo
                   viewBox="0 0 236 236"
                   fill="currentColor"
-                  className="h-9 w-9 text-brand-500 group-hover:scale-110 transition-transform"
+                  className="h-9 w-9 text-white-500 group-hover:scale-110 transition-transform"
                 />
               </div>
               <div className="flex flex-col">
