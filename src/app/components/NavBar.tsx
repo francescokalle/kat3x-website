@@ -8,7 +8,9 @@ import {
   Briefcase, 
   FlaskConical, 
   ShieldCheck, 
-  Activity 
+  Activity,
+  EyeOff,
+  Search 
 } from 'lucide-react';
 import CatLogo from "@res/logo/CatLogo";
 
@@ -17,6 +19,8 @@ const navData: Record<string, any> = {
   it: {
     tagline: "AI Visibility Observatory",
     problem: "Il Problema",
+    semantic: "Invisibilità Semantica",
+    chatgpt: "Apparire su ChatGPT",
     useCases: "Casi d'Uso",
     methodology: "Metodologia",
     standard: "Standard CHKCD",
@@ -25,6 +29,8 @@ const navData: Record<string, any> = {
   en: {
     tagline: "AI Visibility Observatory",
     problem: "The Problem",
+    semantic: "Semantic Invisibility",
+    chatgpt: "Appear on ChatGPT",
     useCases: "Use Cases",
     methodology: "Methodology",
     standard: "CHKCD Standard",
@@ -48,13 +54,10 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
   };
 
   return (
-    // Usiamo un Fragment (<>) per restituire sia lo spacer che la navbar
     <>
-      {/* 
-        SPACER INVISIBILE:
+      {/* SPACER INVISIBILE:
         Questo div scorre normalmente con la pagina. È alto 96px (h-24) per compensare 
-        i 16px (top-4) + 64px (h-16) della navbar, più un piccolo margine extra di respiro.
-        bg-transparent assicura che prenda il colore del container/sfondo sottostante.
+        i 16px (top-4) + 64px (h-16) della navbar.
       */}
       <div 
         className="w-full h-24 bg-transparent pointer-events-none flex-shrink-0" 
@@ -64,7 +67,6 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
       {/* LA NAVBAR FISSA */}
       <div className="fixed top-4 left-0 w-full flex justify-center px-4 sm:px-6 lg:px-8 z-50 pointer-events-none">
         
-        {/* w-full gli permette di ridursi infinitamente senza blocchi, max-w-7xl lo limita su desktop */}
         <div className="w-full max-w-7xl relative pointer-events-auto">
           
           {/* L'HEADER VISIBILE */}
@@ -95,6 +97,14 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
               <nav className="hidden md:flex gap-6 text-sm font-medium text-slate-600">
                 <a href={`/${lang}/problem`} className="hover:text-brand-600 transition-colors">
                   {dict.problem}
+                </a>
+
+                {/* Nuovi link abilitati - Stesso stile degli altri */}
+                <a href={`/${lang}/invisibilita-semantica`} className="hover:text-brand-600 transition-colors">
+                  {dict.semantic}
+                </a>
+                <a href={`/${lang}/come-apparire-su-chatgpt`} className="hover:text-brand-600 transition-colors">
+                  {dict.chatgpt}
                 </a>
                 
                 <span className="group flex items-center gap-2 opacity-60 transition-colors" style={disabledCursorStyle}>
@@ -135,7 +145,7 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
             </div>
           </header>
 
-          {/* MOBILE MENU DROPDOWN */}
+          {/* MOBILE MENU DROPDOWN - RIPRISTINATO STILE ORIGINALE */}
           <div 
             className={`md:hidden absolute z-50 left-0 right-0 sm:left-auto sm:right-0 top-[calc(100%+0.75rem)] sm:w-[320px] rounded-2xl shadow-2xl border border-white/20 p-4 transform transition-all duration-300 ease-out origin-top sm:origin-top-right
               bg-white/50 backdrop-blur-md overflow-hidden
@@ -153,7 +163,27 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
                 <span className="text-xs sm:text-sm font-medium text-center truncate w-full">{dict.problem}</span>
               </a>
 
-              {/* Item 2: Use Cases (Disabled) */}
+              {/* NUOVO: Invisibilità Semantica (Abilitato, stile brand-50) */}
+              <a 
+                href={`/${lang}/invisibilita-semantica`} 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-brand-50/60 hover:bg-brand-100/80 text-slate-700 hover:text-brand-600 transition-colors border border-white/20 min-w-0"
+              >
+                <EyeOff className="w-6 h-6 sm:w-7 sm:h-7 mb-2 flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-center leading-tight w-full">{dict.semantic}</span>
+              </a>
+
+              {/* NUOVO: Come apparire su ChatGPT (Abilitato, stile brand-50) */}
+              <a 
+                href={`/${lang}/come-apparire-su-chatgpt`} 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-brand-50/60 hover:bg-brand-100/80 text-slate-700 hover:text-brand-600 transition-colors border border-white/20 min-w-0"
+              >
+                <Search className="w-6 h-6 sm:w-7 sm:h-7 mb-2 flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-center leading-tight w-full">{dict.chatgpt}</span>
+              </a>
+
+              {/* Item 4: Use Cases (Disabled) */}
               <div 
                 className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-brand-50/50 text-slate-400 opacity-60 relative border border-white/10 min-w-0" 
                 style={disabledCursorStyle}
@@ -163,7 +193,7 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
                 <span className="absolute top-1 right-1 sm:top-2 sm:right-2 text-[10px] sm:text-xs">🚧</span>
               </div>
 
-              {/* Item 3: Methodology (Disabled) */}
+              {/* Item 5: Methodology (Disabled) */}
               <div 
                 className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-brand-50/50 text-slate-400 opacity-60 relative border border-white/10 min-w-0" 
                 style={disabledCursorStyle}
@@ -173,7 +203,7 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
                 <span className="absolute top-1 right-1 sm:top-2 sm:right-2 text-[10px] sm:text-xs">🚧</span>
               </div>
 
-              {/* Item 4: Standard (Disabled) */}
+              {/* Item 6: Standard (Disabled) */}
               <div 
                 className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-brand-50/50 text-slate-400 opacity-60 relative border border-white/10 min-w-0" 
                 style={disabledCursorStyle}

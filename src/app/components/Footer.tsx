@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import CatLogo from "@res/logo/CatLogo";
 
@@ -7,6 +9,7 @@ const footerData: Record<string, any> = {
     titles: {
       kb: "Knowledge Base",
       network: "Network",
+      resources: "Risorse",
     },
     links: {
       glossary: "Glossario Canonico",
@@ -15,6 +18,8 @@ const footerData: Record<string, any> = {
       examples: "TONL Examples",
       about: "Chi Siamo",
       playground: "Diagnostic Playground",
+      semantic: "Invisibilità Semantica",
+      chatgpt: "Apparire su ChatGPT",
     },
     copyright: "Semantic Node — Machine Readable Ready",
   },
@@ -23,6 +28,7 @@ const footerData: Record<string, any> = {
     titles: {
       kb: "Knowledge Base",
       network: "Network",
+      resources: "Resources",
     },
     links: {
       glossary: "Canonical Glossary",
@@ -31,6 +37,8 @@ const footerData: Record<string, any> = {
       examples: "TONL Examples",
       about: "About Us",
       playground: "Diagnostic Playground",
+      semantic: "Semantic Invisibility",
+      chatgpt: "Appear on ChatGPT",
     },
     copyright: "Semantic Node — Machine Readable Ready",
   },
@@ -52,14 +60,15 @@ export default function Footer({ lang }: FooterProps) {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div>
             <a href={`/${lang}`} className="inline-flex items-center gap-3 group">
               <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shadow-sm">
                 <CatLogo
                   viewBox="0 0 236 236"
                   fill="currentColor"
-                  className="h-9 w-9 text-white-500 group-hover:scale-110 transition-transform"
+                  className="h-9 w-9 text-white group-hover:scale-110 transition-transform"
                 />
               </div>
               <div className="flex flex-col">
@@ -71,8 +80,7 @@ export default function Footer({ lang }: FooterProps) {
                 </span>
               </div>
             </a>
-
-            <p className="mt-5 text-sm leading-relaxed max-w-md text-slate-300/90">
+            <p className="mt-5 text-sm leading-relaxed text-slate-300/90">
               {dict.desc}
             </p>
           </div>
@@ -82,40 +90,45 @@ export default function Footer({ lang }: FooterProps) {
             <h4 className="text-white font-bold mb-4">{dict.titles.kb}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href={`/${lang}/knowledge/glossary`}
-                  className="hover:text-white transition-colors"
-                >
+                <a href={`/${lang}/knowledge/glossary`} className="hover:text-white transition-colors">
                   {dict.links.glossary}
                 </a>
               </li>
               <li>
-                <a
-                  href={`/${lang}/knowledge/methodology`}
-                  className="hover:text-white transition-colors"
-                >
+                <a href={`/${lang}/knowledge/methodology`} className="hover:text-white transition-colors">
                   {dict.links.protocol}
                 </a>
               </li>
               <li>
-                <a
-                  href={`/${lang}/knowledge/tonl`}
-                  className="hover:text-white transition-colors"
-                >
+                <a href={`/${lang}/knowledge/tonl`} className="hover:text-white transition-colors">
                   {dict.links.syntax}
                 </a>
               </li>
               <li>
-                <a
-                  href={`/${lang}/knowledge/examples`}
-                  className="hover:text-white transition-colors"
-                >
+                <a href={`/${lang}/knowledge/examples`} className="hover:text-white transition-colors">
                   {dict.links.examples}
                 </a>
               </li>
               <li>
-                <a href="/llms.txt" className="hover:text-white transition-colors">
+                <a href="/llms.txt" className="hover:text-white transition-colors font-mono opacity-80">
                   llms.txt
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Risorse */}
+          <div>
+            <h4 className="text-white font-bold mb-4">{dict.titles.resources}</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href={`/${lang}/invisibilita-semantica`} className="hover:text-white transition-colors">
+                  {dict.links.semantic}
+                </a>
+              </li>
+              <li>
+                <a href={`/${lang}/come-apparire-su-chatgpt`} className="hover:text-white transition-colors">
+                  {dict.links.chatgpt}
                 </a>
               </li>
             </ul>
@@ -136,18 +149,12 @@ export default function Footer({ lang }: FooterProps) {
                 </a>
               </li>
               <li>
-                <a
-                  href={`/${lang}/diagnostic`}
-                  className="hover:text-white transition-colors"
-                >
+                <a href={`/${lang}/diagnostic`} className="hover:text-white transition-colors">
                   {dict.links.playground}
                 </a>
               </li>
               <li>
-                <a
-                  href={`/${lang}/about`}
-                  className="hover:text-white transition-colors"
-                >
+                <a href={`/${lang}/about`} className="hover:text-white transition-colors">
                   {dict.links.about}
                 </a>
               </li>
