@@ -100,10 +100,10 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
                 </a>
 
                 {/* Nuovi link abilitati - Stesso stile degli altri */}
-                <a href={`/${lang}/invisibilita-semantica`} className="hover:text-brand-600 transition-colors">
+                <a href={`/${lang}/semantic-invisibility`} className="hover:text-brand-600 transition-colors">
                   {dict.semantic}
                 </a>
-                <a href={`/${lang}/come-apparire-su-chatgpt`} className="hover:text-brand-600 transition-colors">
+                <a href={`/${lang}/appear-on-chatgpt`} className="hover:text-brand-600 transition-colors">
                   {dict.chatgpt}
                 </a>
                 
@@ -165,7 +165,7 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
 
               {/* NUOVO: Invisibilità Semantica (Abilitato, stile brand-50) */}
               <a 
-                href={`/${lang}/invisibilita-semantica`} 
+                href={`/${lang}/semantic-invisibility`} 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-brand-50/60 hover:bg-brand-100/80 text-slate-700 hover:text-brand-600 transition-colors border border-white/20 min-w-0"
               >
@@ -175,7 +175,7 @@ export default function Navbar({ lang = 'en' }: NavbarProps) {
 
               {/* NUOVO: Come apparire su ChatGPT (Abilitato, stile brand-50) */}
               <a 
-                href={`/${lang}/come-apparire-su-chatgpt`} 
+                href={`/${lang}/appear-on-chatgpt`} 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-brand-50/60 hover:bg-brand-100/80 text-slate-700 hover:text-brand-600 transition-colors border border-white/20 min-w-0"
               >

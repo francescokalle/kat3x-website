@@ -176,17 +176,6 @@ export default function ProvaTuStesso({ lang }: { lang: string }) {
             {dict.explanation}
           </p>
         </div>
-
-        {/* Mini CTA */}
-        <div className="text-center">
-          <p className="text-2xl font-bold text-slate-900 mb-6">{dict.cta}</p>
-          <a
-            href={`/${lang}/diagnostic`}
-            className="inline-flex items-center gap-2 bg-brand-600 text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg hover:bg-brand-700 hover:-translate-y-0.5 transition-all"
-          >
-            {dict.ctaButton}
-          </a>
-        </div>
       </div>
     </section>
   );
