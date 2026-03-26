@@ -1,0 +1,525 @@
+{
+  "generated_at": "2026-03-26T16:20:15.876Z",
+  "model": "claude-opus-4-6",
+  "pages": [
+    {
+      "page": "home",
+      "lang": "it",
+      "title": "Kat3x — Osservatorio Indipendente AI Citability",
+      "description": "Come fanno le AI a comprendere e citare la tua azienda? Kat3x misura l'assimilazione della conoscenza nei LLM con metriche originali come CAMS e LAR.",
+      "keywords": [
+        "AI citability",
+        "osservatorio AI citability",
+        "visibilita AI",
+        "CAMS",
+        "TONL",
+        "misurare citabilita AI",
+        "come le AI citano la mia azienda"
+      ],
+      "faq": [
+        {
+          "question": "Cos'e' l'AI Citability?",
+          "answer": "L'AI Citability e' il grado in cui un brand o concetto e' recuperabile e citabile dai LLM durante il ragionamento. Non e' una metrica SEO ne' un punteggio di sentiment."
+        },
+        {
+          "question": "Cosa misura Kat3x?",
+          "answer": "Kat3x misura quanto i modelli AI hanno assimilato, usano e mantengono la conoscenza strutturata di un dominio. Usa 5 strumenti: CAMS, LAR, DSP, CRS e CRD."
+        },
+        {
+          "question": "Kat3x e' un'agenzia SEO?",
+          "answer": "No. Kat3x non ottimizza il ranking Google. E' un osservatorio indipendente che misura l'integrazione della conoscenza nei LLM. Input, output e audience sono diversi dalla SEO."
+        },
+        {
+          "question": "Quanto costa usare Kat3x?",
+          "answer": "Il test diagnostico AI Citability e' gratuito. Per misurazioni avanzate con CAMS, DSP e CRS, visita la pagina diagnostic su kat3x.com."
+        }
+      ]
+    },
+    {
+      "page": "home",
+      "lang": "en",
+      "title": "Kat3x — Independent AI Citability Observatory",
+      "description": "How do AI systems understand and cite your company? Kat3x measures LLM knowledge assimilation with original instruments like CAMS and LAR.",
+      "keywords": [
+        "AI citability",
+        "AI citability observatory",
+        "AI visibility",
+        "CAMS metric",
+        "TONL",
+        "how AI cites my company",
+        "LLM knowledge assimilation"
+      ],
+      "faq": [
+        {
+          "question": "What is AI Citability?",
+          "answer": "AI Citability is the degree to which a brand or concept is retrievable and citable by LLMs during reasoning. It is not a SEO score, not a sentiment score, not a traffic metric."
+        },
+        {
+          "question": "What does Kat3x measure?",
+          "answer": "Kat3x measures how deeply AI models have assimilated, use, and retain structured knowledge about a domain. It uses 5 instruments: CAMS, LAR, DSP, CRS, and CRD."
+        },
+        {
+          "question": "Is Kat3x a SEO agency?",
+          "answer": "No. Kat3x does not optimize Google rankings. It is an independent observatory that measures knowledge integration in LLMs. Different input, output, and audience from SEO."
+        },
+        {
+          "question": "How much does Kat3x cost?",
+          "answer": "The AI Citability diagnostic test is free. For advanced measurements with CAMS, DSP, and CRS, visit the diagnostic page on kat3x.com."
+        }
+      ]
+    },
+    {
+      "page": "problem",
+      "lang": "it",
+      "title": "La Nuova Invisibilita' — Perche' le AI Non Ti Citano",
+      "description": "Il tuo sito e' primo su Google ma ChatGPT non ti conosce. L'invisibilita' semantica e' il problema nascosto dell'era AI. Scopri come misurarla.",
+      "keywords": [
+        "invisibilita semantica",
+        "nuova invisibilita",
+        "sito invisibile ChatGPT",
+        "perche AI non cita la mia azienda",
+        "ChatGPT non conosce la mia azienda",
+        "visibilita AI vs SEO"
+      ],
+      "faq": [
+        {
+          "question": "Cos'e' l'invisibilita' semantica?",
+          "answer": "L'invisibilita' semantica e' la condizione in cui un dominio e' indicizzato dai motori di ricerca ma strutturalmente assente dalla conoscenza dei modelli AI. Il successo SEO tradizionale maschera questo problema."
+        },
+        {
+          "question": "Perche' ChatGPT non cita la mia azienda?",
+          "answer": "ChatGPT non cerca siti web come Google. Usa conoscenza assimilata durante il training. Se la tua conoscenza non e' strutturata per i LLM, non esisti nel loro spazio semantico."
+        },
+        {
+          "question": "Qual e' la differenza tra ranking Google e AI Citability?",
+          "answer": "Il ranking Google misura la posizione nelle SERP. L'AI Citability misura se un LLM ha integrato strutturalmente il tuo concetto nel suo ragionamento. Sono metriche complementari, non alternative."
+        },
+        {
+          "question": "Come faccio a sapere se sono semanticamente invisibile?",
+          "answer": "Usa il test diagnostico gratuito su kat3x.com/diagnostic. In 60 secondi ricevi il tuo CAMS score che misura il grado di assimilazione della tua conoscenza nei LLM."
+        },
+        {
+          "question": "L'invisibilita' semantica riguarda anche le grandi aziende?",
+          "answer": "Si'. Anche brand noti possono avere bassa AI Citability se la loro conoscenza non e' strutturata per i LLM. Il ranking Google non garantisce visibilita' AI."
+        }
+      ]
+    },
+    {
+      "page": "problem",
+      "lang": "en",
+      "title": "The New Invisibility — Why AI Doesn't Cite You",
+      "description": "Your site ranks #1 on Google but ChatGPT doesn't know you. Semantic invisibility is the hidden problem of the AI era. Discover how to measure it.",
+      "keywords": [
+        "semantic invisibility",
+        "new invisibility",
+        "site invisible to ChatGPT",
+        "why AI doesn't cite my company",
+        "ChatGPT doesn't know my brand",
+        "AI visibility vs SEO"
+      ],
+      "faq": [
+        {
+          "question": "What is semantic invisibility?",
+          "answer": "Semantic invisibility is the condition where a domain is indexed by search engines but structurally absent from LLM knowledge. Traditional SEO success masks this AI-era failure."
+        },
+        {
+          "question": "Why doesn't ChatGPT cite my company?",
+          "answer": "ChatGPT doesn't crawl websites like Google. It uses knowledge assimilated during training. If your knowledge isn't structured for LLMs, you don't exist in their semantic space."
+        },
+        {
+          "question": "What's the difference between Google ranking and AI Citability?",
+          "answer": "Google ranking measures SERP position. AI Citability measures whether a LLM has structurally integrated your concept into its reasoning. They are complementary, not alternatives."
+        },
+        {
+          "question": "How do I know if I'm semantically invisible?",
+          "answer": "Use the free diagnostic test at kat3x.com/diagnostic. In 60 seconds you receive your CAMS score measuring how deeply LLMs have assimilated your knowledge."
+        },
+        {
+          "question": "Does semantic invisibility affect large companies too?",
+          "answer": "Yes. Even well-known brands can have low AI Citability if their knowledge isn't structured for LLMs. Google ranking does not guarantee AI visibility."
+        }
+      ]
+    },
+    {
+      "page": "diagnostic",
+      "lang": "it",
+      "title": "Test AI Citability Gratuito in 60 Secondi — Kat3x",
+      "description": "Scopri come le AI vedono la tua azienda. Test gratuito in 60 secondi: ricevi il tuo CAMS score e misura la tua visibilita' nei LLM. Provalo ora.",
+      "keywords": [
+        "test AI citability gratuito",
+        "CAMS score",
+        "come vedono AI la mia azienda",
+        "misurare visibilita AI",
+        "test gratuito ChatGPT",
+        "diagnostico AI visibility"
+      ],
+      "faq": [
+        {
+          "question": "Cosa misura il test AI Citability?",
+          "answer": "Il test misura il tuo CAMS score: il grado in cui i LLM hanno integrato la conoscenza della tua azienda nel loro spazio semantico, rendendola citabile durante il ragionamento."
+        },
+        {
+          "question": "Il test e' davvero gratuito?",
+          "answer": "Si'. Il test diagnostico base e' completamente gratuito. Inserisci il nome della tua azienda e in 60 secondi ricevi il tuo CAMS score con un report sintetico."
+        },
+        {
+          "question": "Come funziona il test in 3 passi?",
+          "answer": "1. Vai su kat3x.com/diagnostic. 2. Inserisci il nome della tua azienda. 3. Ricevi il tuo CAMS score in 60 secondi con indicazioni sulla tua AI Citability."
+        },
+        {
+          "question": "Cos'e' il CAMS score?",
+          "answer": "CAMS (Contextual Assimilation Measurement Score) misura il grado in cui un LLM ha integrato un concetto strutturato nel suo spazio semantico. Non e' un punteggio SEO ne' un indice di popolarita'."
+        },
+        {
+          "question": "Cosa posso fare dopo aver ricevuto il risultato?",
+          "answer": "Il report indica il tuo livello di assimilazione AI. Se il CAMS e' basso, significa che la tua conoscenza non e' strutturata per i LLM. Kat3x misura il problema, tu decidi come agire."
+        }
+      ]
+    },
+    {
+      "page": "diagnostic",
+      "lang": "en",
+      "title": "Free AI Citability Test in 60 Seconds — Kat3x",
+      "description": "Discover how AI sees your company. Free test in 60 seconds: get your CAMS score and measure your LLM visibility. Try it now.",
+      "keywords": [
+        "free AI citability test",
+        "CAMS score",
+        "how AI sees my company",
+        "measure AI visibility",
+        "free ChatGPT test",
+        "AI visibility diagnostic"
+      ],
+      "faq": [
+        {
+          "question": "What does the AI Citability test measure?",
+          "answer": "The test measures your CAMS score: the degree to which LLMs have integrated your company's knowledge into their semantic space, making it citable during reasoning."
+        },
+        {
+          "question": "Is the test really free?",
+          "answer": "Yes. The basic diagnostic test is completely free. Enter your company name and in 60 seconds you receive your CAMS score with a summary report."
+        },
+        {
+          "question": "How does the test work in 3 steps?",
+          "answer": "1. Go to kat3x.com/diagnostic. 2. Enter your company name. 3. Receive your CAMS score in 60 seconds with AI Citability insights."
+        },
+        {
+          "question": "What is the CAMS score?",
+          "answer": "CAMS (Contextual Assimilation Measurement Score) measures the degree to which a LLM has integrated a structured concept into its semantic space. It is not a SEO score or popularity index."
+        },
+        {
+          "question": "What can I do after receiving my result?",
+          "answer": "The report shows your AI assimilation level. If CAMS is low, your knowledge isn't structured for LLMs. Kat3x measures the problem, you decide how to act."
+        }
+      ]
+    },
+    {
+      "page": "invisibilita-semantica",
+      "lang": "it",
+      "title": "Invisibilita' Semantica: Perche' le AI Non Ti Trovano",
+      "description": "Il tuo sito e' primo su Google ma i LLM non lo conoscono. L'invisibilita' semantica blocca la tua AI Citability. Scopri come misurarla con CAMS.",
+      "keywords": [
+        "invisibilita semantica",
+        "perche AI non cita azienda",
+        "sito primo su Google invisibile AI",
+        "AI citability bassa",
+        "Knowledge Seeding",
+        "come farsi trovare dai LLM"
+      ],
+      "faq": [
+        {
+          "question": "Cos'e' l'invisibilita' semantica?",
+          "answer": "L'invisibilita' semantica e' la condizione in cui un dominio e' indicizzato dai motori di ricerca ma strutturalmente assente dalla conoscenza dei modelli AI. Il ranking Google non garantisce citabilita' AI."
+        },
+        {
+          "question": "Qual e' la differenza tra invisibilita' semantica e cattiva SEO?",
+          "answer": "La cattiva SEO significa non apparire su Google. L'invisibilita' semantica significa apparire su Google ma non esistere per i LLM. Sono problemi diversi con soluzioni diverse."
+        },
+        {
+          "question": "Come si risolve l'invisibilita' semantica?",
+          "answer": "Attraverso il Knowledge Seeding: la strutturazione strategica della conoscenza affinche' i LLM possano assimilarla. Kat3x misura il livello di assimilazione, non esegue l'ottimizzazione."
+        },
+        {
+          "question": "Il Knowledge Seeding e' la stessa cosa della SEO?",
+          "answer": "No. La SEO ottimizza contenuti per i motori di ricerca. Il Knowledge Seeding struttura la conoscenza per i LLM. Input diverso, output diverso, strumenti diversi."
+        },
+        {
+          "question": "Quanto tempo serve per uscire dall'invisibilita' semantica?",
+          "answer": "Dipende dal dominio e dalla complessita' della conoscenza. Il primo passo e' misurare il CAMS score attuale con il test gratuito su kat3x.com/diagnostic."
+        }
+      ]
+    },
+    {
+      "page": "invisibilita-semantica",
+      "lang": "en",
+      "title": "Semantic Invisibility: Why AI Can't Find You (2026)",
+      "description": "Your site ranks on Google but LLMs don't know it. Semantic invisibility blocks your AI Citability. Discover how to measure it with CAMS.",
+      "keywords": [
+        "semantic invisibility",
+        "why AI doesn't cite my company",
+        "Google rank but AI invisible",
+        "low AI citability",
+        "Knowledge Seeding",
+        "how to get found by LLMs"
+      ],
+      "faq": [
+        {
+          "question": "What is semantic invisibility?",
+          "answer": "Semantic invisibility is the condition where a domain is indexed by search engines but structurally absent from LLM knowledge. Google ranking does not guarantee AI citability."
+        },
+        {
+          "question": "What's the difference between semantic invisibility and bad SEO?",
+          "answer": "Bad SEO means not appearing on Google. Semantic invisibility means appearing on Google but not existing for LLMs. Different problems with different solutions."
+        },
+        {
+          "question": "How do you fix semantic invisibility?",
+          "answer": "Through Knowledge Seeding: strategically structuring knowledge so LLMs can assimilate it. Kat3x measures assimilation level, it does not perform the optimization."
+        },
+        {
+          "question": "Is Knowledge Seeding the same as SEO?",
+          "answer": "No. SEO optimizes content for search engines. Knowledge Seeding structures knowledge for LLMs. Different input, different output, different tools."
+        },
+        {
+          "question": "How long does it take to fix semantic invisibility?",
+          "answer": "It depends on the domain and knowledge complexity. The first step is measuring your current CAMS score with the free test at kat3x.com/diagnostic."
+        }
+      ]
+    },
+    {
+      "page": "come-apparire-su-chatgpt",
+      "lang": "it",
+      "title": "Come Apparire su ChatGPT — Guida AI Citability 2026",
+      "description": "ChatGPT non cita la tua azienda? Non e' un problema SEO. Serve strutturare la conoscenza per i LLM. Scopri come con il test CAMS gratuito.",
+      "keywords": [
+        "come apparire su ChatGPT",
+        "visibilita ChatGPT",
+        "farsi trovare ChatGPT",
+        "come farsi citare da ChatGPT",
+        "ChatGPT non cita la mia azienda",
+        "Generative Engine Optimization"
+      ],
+      "faq": [
+        {
+          "question": "Come faccio ad apparire su ChatGPT?",
+          "answer": "Non basta la SEO. Devi strutturare la tua conoscenza in formati che i LLM possano assimilare. Il Knowledge Seeding e' la pratica che rende la tua conoscenza citabile da ChatGPT e altri AI."
+        },
+        {
+          "question": "Perche' ChatGPT non cita la mia azienda?",
+          "answer": "ChatGPT non cerca siti come Google. Usa conoscenza assimilata nel training. Se i tuoi contenuti non sono strutturati per i LLM, ChatGPT non puo' citarti durante il ragionamento."
+        },
+        {
+          "question": "Qual e' la differenza tra SEO e Generative Engine Optimization?",
+          "answer": "La SEO ottimizza per le SERP di Google. La GEO ottimizza contenuti e struttura per la scoperta e citazione da parte di AI generative. Kat3x misura l'efficacia della GEO con il CAMS."
+        },
+        {
+          "question": "Serve anche per Perplexity, Claude e Gemini?",
+          "answer": "Si'. L'AI Citability riguarda tutti i LLM, non solo ChatGPT. Le metriche CAMS, DSP e CRS misurano l'assimilazione attraverso modelli diversi, non un singolo sistema."
+        },
+        {
+          "question": "Quanto costa farsi citare da ChatGPT?",
+          "answer": "Il test diagnostico CAMS e' gratuito. La strutturazione della conoscenza per i LLM dipende dalla complessita' del dominio. Kat3x misura, non vende ottimizzazione."
+        }
+      ]
+    },
+    {
+      "page": "come-apparire-su-chatgpt",
+      "lang": "en",
+      "title": "How to Appear on ChatGPT — AI Citability Guide 2026",
+      "description": "ChatGPT doesn't cite your company? It's not a SEO problem. You need to structure knowledge for LLMs. Discover how with the free CAMS test.",
+      "keywords": [
+        "how to appear on ChatGPT",
+        "ChatGPT visibility",
+        "get cited by ChatGPT",
+        "how to get found by ChatGPT",
+        "ChatGPT doesn't know my company",
+        "Generative Engine Optimization"
+      ],
+      "faq": [
+        {
+          "question": "How do I appear on ChatGPT?",
+          "answer": "SEO alone won't work. You need to structure your knowledge in formats LLMs can assimilate. Knowledge Seeding is the practice that makes your knowledge citable by ChatGPT and other AI."
+        },
+        {
+          "question": "Why doesn't ChatGPT cite my company?",
+          "answer": "ChatGPT doesn't crawl sites like Google. It uses knowledge assimilated during training. If your content isn't structured for LLMs, ChatGPT cannot cite you during reasoning."
+        },
+        {
+          "question": "What's the difference between SEO and Generative Engine Optimization?",
+          "answer": "SEO optimizes for Google SERPs. GEO optimizes content and structure for discovery and citation by generative AI. Kat3x measures GEO effectiveness with CAMS."
+        },
+        {
+          "question": "Does this work for Perplexity, Claude, and Gemini too?",
+          "answer": "Yes. AI Citability applies to all LLMs, not just ChatGPT. CAMS, DSP, and CRS metrics measure assimilation across different models, not a single system."
+        },
+        {
+          "question": "How much does it cost to get cited by ChatGPT?",
+          "answer": "The CAMS diagnostic test is free. Structuring knowledge for LLMs depends on domain complexity. Kat3x measures, it does not sell optimization."
+        }
+      ]
+    },
+    {
+      "page": "about",
+      "lang": "it",
+      "title": "Kat3x — Chi Siamo: Osservatorio AI Citability",
+      "description": "Kat3x e' un osservatorio indipendente fondato da Denis Salvadori. Misuriamo come i LLM assimilano, usano e mantengono la conoscenza strutturata.",
+      "keywords": [
+        "chi e Kat3x",
+        "Denis Salvadori",
+        "osservatorio AI citability",
+        "ecosistema AI visibility",
+        "CHKCD",
+        "metodologia Kat3x"
+      ],
+      "faq": [
+        {
+          "question": "Chi ha fondato Kat3x?",
+          "answer": "Kat3x e' stata fondata da Denis Salvadori, con background in systems thinking e architettura della conoscenza. E' un osservatorio indipendente, non un'agenzia."
+        },
+        {
+          "question": "Qual e' la relazione tra Kat3x e CHKCD?",
+          "answer": "Kat3x adotta CHKCD (Cognitive Hierarchical Knowledge for Contextual Discourse) come framework normativo. CHKCD definisce la struttura della conoscenza, Kat3x misura l'assimilazione. Complementari, non gerarchici."
+        },
+        {
+          "question": "Kat3x vende servizi di ottimizzazione?",
+          "answer": "No. Kat3x e' un osservatorio: misura l'assimilazione della conoscenza nei LLM. I clienti ricevono misurazioni e agiscono autonomamente. Kat3x non ottimizza, misura."
+        },
+        {
+          "question": "Qual e' la differenza tra Kat3x e un tool di brand monitoring?",
+          "answer": "Il brand monitoring traccia menzioni e sentiment. Kat3x misura se un concetto e' strutturalmente integrato nei percorsi di ragionamento dei LLM. Misurazione strutturale vs superficiale."
+        }
+      ]
+    },
+    {
+      "page": "about",
+      "lang": "en",
+      "title": "Kat3x — About: AI Citability Observatory",
+      "description": "Kat3x is an independent observatory founded by Denis Salvadori. We measure how LLMs assimilate, use, and retain structured knowledge.",
+      "keywords": [
+        "who is Kat3x",
+        "Denis Salvadori",
+        "AI citability observatory",
+        "AI visibility ecosystem",
+        "CHKCD",
+        "Kat3x methodology"
+      ],
+      "faq": [
+        {
+          "question": "Who founded Kat3x?",
+          "answer": "Kat3x was founded by Denis Salvadori, with a background in systems thinking and knowledge architecture. It is an independent observatory, not an agency."
+        },
+        {
+          "question": "What is the relationship between Kat3x and CHKCD?",
+          "answer": "Kat3x adopts CHKCD (Cognitive Hierarchical Knowledge for Contextual Discourse) as its normative framework. CHKCD defines knowledge structure, Kat3x measures assimilation. Complementary, not hierarchical."
+        },
+        {
+          "question": "Does Kat3x sell optimization services?",
+          "answer": "No. Kat3x is an observatory: it measures knowledge assimilation in LLMs. Clients receive measurements and act on them. Kat3x does not optimize, it measures."
+        },
+        {
+          "question": "What's the difference between Kat3x and a brand monitoring tool?",
+          "answer": "Brand monitoring tracks mentions and sentiment. Kat3x measures whether a concept is structurally integrated into LLM reasoning pathways. Structural vs superficial measurement."
+        }
+      ]
+    },
+    {
+      "page": "knowledge",
+      "lang": "it",
+      "title": "Kat3x — Knowledge Base: CAMS, LAR, DSP, CRS, TONL",
+      "description": "Metriche e formati per la visibilita' AI. Definizioni canoniche di CAMS, LAR, DSP, CRS, CRD e del formato TONL. Riferimento tecnico completo.",
+      "keywords": [
+        "CAMS metrica",
+        "LAR LLM Adoption Readiness",
+        "TONL formato",
+        "Knowledge Seeding",
+        "DSP Domain Semantic Pressure",
+        "CRS Cognitive Routing Stability",
+        "CRD Cognitive Routing Decay"
+      ],
+      "faq": [
+        {
+          "question": "Cos'e' il CAMS?",
+          "answer": "CAMS (Contextual Assimilation Measurement Score) misura il grado in cui un LLM ha integrato un concetto strutturato nel suo spazio semantico, rendendolo citabile durante il ragionamento. Non e' un punteggio SEO."
+        },
+        {
+          "question": "Cos'e' il LAR?",
+          "answer": "LAR (LLM Adoption Readiness) e' un indicatore composito di presenza di segnali, esposizione e maturita' di routing nell'adozione LLM. Misura se un dominio e' riconosciuto e usato dai LLM."
+        },
+        {
+          "question": "Cos'e' il TONL?",
+          "answer": "TONL (Technical Object Notation Language) e' una sintassi strutturata per rappresentare conoscenza tecnica in forma leggibile dalle macchine. Riduzione del 50-70% dei token rispetto a JSON mantenendo piena parseabilita' LLM."
+        },
+        {
+          "question": "Qual e' la differenza tra CRS e CRD?",
+          "answer": "CRS (Cognitive Routing Stability) misura la consistenza del recupero concettuale nel tempo. CRD (Cognitive Routing Decay) misura la velocita' e direzione del cambiamento. CRS misura stabilita', CRD misura il vettore di decadimento."
+        },
+        {
+          "question": "Cos'e' il DSP?",
+          "answer": "DSP (Domain Semantic Pressure) osserva come la conoscenza assimilata viene usata dai LLM: pattern di vocabolario, segnali di overfitting, distorsione o appiattimento dei concetti, stabilita' sotto variazione del prompt."
+        }
+      ]
+    },
+    {
+      "page": "knowledge",
+      "lang": "en",
+      "title": "Kat3x — Knowledge Base: CAMS, LAR, DSP, CRS, TONL",
+      "description": "Metrics and formats for AI visibility. Canonical definitions of CAMS, LAR, DSP, CRS, CRD and the TONL format. Complete technical reference.",
+      "keywords": [
+        "CAMS metric",
+        "LAR LLM Adoption Readiness",
+        "TONL format",
+        "Knowledge Seeding",
+        "DSP Domain Semantic Pressure",
+        "CRS Cognitive Routing Stability",
+        "CRD Cognitive Routing Decay"
+      ],
+      "faq": [
+        {
+          "question": "What is CAMS?",
+          "answer": "CAMS (Contextual Assimilation Measurement Score) measures the degree to which a LLM has integrated a structured concept into its semantic space, making it citable during reasoning. It is not a SEO score."
+        },
+        {
+          "question": "What is LAR?",
+          "answer": "LAR (LLM Adoption Readiness) is a composite indicator of signal presence, exposure, and routing maturity in LLM adoption. It measures whether a domain is recognized and used by LLMs."
+        },
+        {
+          "question": "What is TONL?",
+          "answer": "TONL (Technical Object Notation Language) is a structured syntax for representing technical knowledge in machine-readable form. 50-70% token reduction vs JSON while maintaining full LLM parseability."
+        },
+        {
+          "question": "What's the difference between CRS and CRD?",
+          "answer": "CRS (Cognitive Routing Stability) measures consistency of concept retrieval over time. CRD (Cognitive Routing Decay) measures velocity and direction of change. CRS measures stability, CRD measures the drift vector."
+        },
+        {
+          "question": "What is DSP?",
+          "answer": "DSP (Domain Semantic Pressure) observes how assimilated knowledge is used by LLMs: vocabulary patterns, overfitting signals, concept distortion or flattening, stability under prompt variation."
+        }
+      ]
+    }
+  ],
+  "trending_topics": [
+    {
+      "topic": "Google AI Overview optimization",
+      "relevance": "HIGH — Google AI Overview extracts FAQ and definitional snippets directly. Kat3x FAQ schema is primary feed for AI Overview inclusion.",
+      "action": "Ensure all FAQ answers are 40-60 words. Add HowTo schema to diagnostic page. First 150 words of each page must contain a definitional sentence pattern."
+    },
+    {
+      "topic": "Generative Engine Optimization (GEO) as search category",
+      "relevance": "HIGH — GEO is emerging as a recognized search term in 2026. Kat3x is GEO-native: it measures GEO effectiveness.",
+      "action": "Add GEO as secondary keyword on come-apparire-su-chatgpt and invisibilita-semantica pages. Create FAQ comparing GEO vs SEO on both."
+    },
+    {
+      "topic": "Perplexity and RAG-based AI search growth",
+      "relevance": "MEDIUM — Perplexity uses RAG, making structured knowledge immediately discoverable without training cycles.",
+      "action": "Add Perplexity-specific FAQ on come-apparire-su-chatgpt. Mention RAG in knowledge page FAQ. Structured data in /knowledge/ is already RAG-optimized via TONL."
+    },
+    {
+      "topic": "E-E-A-T signals for AI-generated content verification",
+      "relevance": "MEDIUM — Google increasingly validates expertise signals. Kat3x has strong E-E-A-T through founder expertise and original methodology.",
+      "action": "Add author schema (Denis Salvadori) to about page JSON-LD. Add Organization schema with founder property to home page. Ensure all knowledge pages reference methodology source."
+    },
+    {
+      "topic": "LLM citability as enterprise concern",
+      "relevance": "HIGH — Enterprise brands discovering that SEO success does not equal AI visibility. Core Kat3x value proposition.",
+      "action": "Add enterprise-specific FAQ on problem page: 'Does this affect large companies?' Add B2B keywords: 'enterprise AI visibility', 'brand AI citability audit'."
+    }
+  ]
+}

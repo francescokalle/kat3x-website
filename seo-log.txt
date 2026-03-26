@@ -1,0 +1,24 @@
+Host localhost:3000 was resolved.
+* IPv6: ::1
+* IPv4: 127.0.0.1
+*   Trying [::1]:3000...
+* Established connection to localhost (::1 port 3000) from ::1 port 40268 
+* using HTTP/1.x
+> POST /api/seo-refresh HTTP/1.1
+> Host: localhost:3000
+> User-Agent: curl/8.19.0
+> Accept: */*
+> Authorization: Bearer percheiosonotroppoking
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+< content-type: application/json
+< Date: Thu, 26 Mar 2026 16:20:15 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< Transfer-Encoding: chunked
+< 
+{ [390 bytes data]
+* Connection #0 to host localhost:3000 left intact
+{"success":true,"generated_at":"2026-03-26T16:20:15.878Z","pages_count":14,"trending_topics_count":5,"backup":"seo-metadata.backup.json","usage":{"input_tokens":7248,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":6831,"service_tier":"standard","inference_geo":"global"}}
