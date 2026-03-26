@@ -21,7 +21,7 @@
 // ============================================================
 // IMPORT: getPageFaq da config/metadata-per-page
 // ============================================================
-import { getPageFaq } from "../config/metadata-per-page"
+import { getPageFaq } from "@/config/metadata-per-page"
 
 // ============================================================
 // TIPO: Entity per Schema.org
